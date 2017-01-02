@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<title>C Tips</title>
+
+<xmp theme="united" style="display:none;">
+
+
+### Micro-Resumo de opcoes do GCC
+
+OPCAO     | Significado
+----------|-------------
+-Wall     | Liga grande quantidade de warnings do GCC
+-W        | Liga warnings extras, alm daqueles ligados por -Wall
+-ansi     | Desabilita extenses do GCC s linguangens C/C++
+-pedantic | Emite warnings sobre uso de itens proibidos pelo padro ANSI
+-O2       | Liga o terceiro nvel de otimizao de cdigo do GCC
+-o        | Especifica qual arquivo ser gerado como sada (executvel)
+-bstatic  | Controla como as bibliotecas sao processadas (estatica ou dinamica)
+-c        | Compile and assemble, but do not link (see c++ --help)
+
+
+
+### Locacao de matrizes grandes
+
+Problema do "segmentation fault".
+
+```sh
+$ c++ teste.c -o teste
+$ ./teste
+Falha de segmentao 
+
+$ ulimit -s
+8192
+$ ulimit -s 16384
+$ ./teste
+OK
+```
+
+### Criar biblioteca esttica com Makefile
+
++ Cria os objetos .o
+
+```makefile
+.o:.cpp
+	c++ -c $< 
+```
+
+
++ Cria a biblioteca libbola.a com os .o
+
+```makefile
+libbola.a: $(OBJECTS)
+	ar -cvq $@ *.o
+```
+
++ Compila um programa 'Prog' que usa a biblioteca 'bola'.
+> O Parametro DIR contm o caminho (path) para minha
+> biblioteca, sendo o -I referente ao include (cabealhos .h),
+> e o -L referente a library 'libbola.a'.
+
+```makefile
+Prog: Prog.cpp
+	c++ $< -o $@ -I$(DIR) -L$(DIR) -lbola
+```
+
+</xmp>
+
+<script src="../strapdown/v/0.2/strapdown.js"></script>
+</html>

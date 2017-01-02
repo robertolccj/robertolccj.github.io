@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Arquivo de Dados</title>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+</head>
+<xmp theme="united" style="display:none;">
+
+
+# MANIPULAR AQUIVOS DE DADOS
+
+
+
+### CAT
+
+Mostrar, no terminal, o conteúdo do arquivo
+`$ cat file.txt`
+
+Mostrar arquivo compactado com gzip
+`$ zcat file.txt`
+
+Inverter arquivo (cat ao contrario)
+`$ tac file.txt`
+
+
+
+### HEAD
+
+Mostrar primeiras linhas
+`$ head file.txt`
+
+Mostrar duas primeiras linhas
+`$ head -n2 file.txt`
+
+
+
+### TAIL
+
+Mostrar últimas linhas
+`$ tail file.txt`
+
+Mostrar duas últimas linhas
+`$ tail -n2 file.txt`
+
+Acompanhar geração de arquivo em tempo real. (MUITO ÚTIL)
+`$ tail -f output.log`
+
+
+
+### SED
+
+Apaga linhas especificas (1a e 2a no caso).
+
+`$ sed -i '1,2d' file.txt  | '-i' aplica no proprio arquivo`
+
+`$ sed '1,2d' file.txt > output.dat  | criado output.dat`
+
+
+
+Apaga última linha.
+
+```
+$ sed '$d' file.txt
+```
+
+
+
+Apaga linhas inicianda com determinado caractere (# no caso).
+```
+$ sed '/^#/ d' file.txt
+```
+
+
+Mostrar linhas especificas.
+```
+$ sed -n '1,2p' file.txt   | 1a e 2a linhas
+$ sed -n -e '1,2p' -e '5,7p' file.txt | 1a,2a,5a,6A,7a linhas
+$ sed -n '$p' file.txt | útima linha
+$ sed '$!d' file.txt  | alternativa
+$ sed '$q;d' file.txt | alternativa, grandes arquivos
+```
+
+
+Inserir texto em linha específica (1a no caso)
+`$ sed '1 i #Comentario na primeira linha' file.txt`
+
+Substituir caractere/string | no caso, remove todos os ')'
+`$ sed 's/)//g' file.txt`
+
+
+
+### AWK
+
+Exibir coluna específica (2a no caso).
+`$ awk '{print $2}' arq1.txt > arq2.txt`
+
+### WC
+
+Mostrar numero de linhas de um arquivo.
+`wc -l arquivo.txt`
+
+
+
+### PASTE
+
+Unir arquivos em colunas.
+`$ paste arq1.dat arq2.dat`
+
+
+
+### WATCH
+
+Ver saída de comando repetidamente, podendo ser usado para monitorar,
+em tempo real, o tamaho de um arquivo.
+`$ watch du -h arquivo.txt`
+
+
+
+
+### FIND
+
+Procurando arquivo que possui algum texto
+
+`user@linux:~$ find -type f -exec grep -H "ui.osd.text_palette" {} \;`
+
+
+Procurar e empacotar arquivos de um diretorio e subdiretorio
+
+`user@linux:~$ find -type f -not -name “arq*.txt”`
+
+obs: o not inverte a seleção no find
+
+
+Procurar arquivos (somente files) menores que 1000k e verificar o tamanho de cada um, e mostrar tamanho final
+`user@linux:~$ find /home -type f -size -1000k | xargs du -csh`
+
+
+
+Filtrando no find com xargs
+
+```
+user@linux:~$ find diretorio/ -type f \( -iname 'poro07_??_*' ! -iname 'poro07_??_*' \) > file.txt
+user@linux:~$ cat file.txt | xargs du -csh
+```
+
+
+### Dividir / ReUnir
+```bash
+split -b 100k arquivo_grande.gz
+```
+
+```bash
+cat xaa xab xac > arquivo_grande.gz
+```
+
+
+
+### Criptografar / Descriptografar
+
+```gpg -c arquivo```
+(requisita criação de senha)
+
+``` $ gpg arquivo.gpg```
+(requisita senha criada)
+
+
+
+
+### Aguns Scripts
+
+```bash
+#/bin/bash!
+
+#Corta a 11a coluna dos arquivos "dadospartdoi*"
+for i in dadospartdir1*  
+do
+var1=`echo $i | cut -b 6- `
+awk '{print$11}' $i > tempo_$var1
+done
+
+#Remove as duas primeiras linhas e retira os parenteses
+for i in tempo_p*  
+do
+sed -i '1,2d' $i
+sed -i 's/)//g' $i
+done
+
+#Tirar o numero de linhas do arquivo
+for i in tempo_p*  
+do
+var2=`wc -l $i | cut -d " " -f1`
+mv $i aa+$var2+$i
+done
+```
+
+</xmp>
+
+<script src="../strapdown/v/0.2/strapdown.js"></script>
+</html>
+

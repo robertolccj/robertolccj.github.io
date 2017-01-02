@@ -1,0 +1,18 @@
+Boot Linux EFI no OS X
+
+Montado particao EFI com (fstab): /dev/sda1   /boot/efi
+
+vfat rw,relatime,fmask=0022,dmask=0022,codepage=437,iocharset=iso8859-1,shortname=mixed,errors=remount-ro 0 2
+
+Dentro do diretorio /boot/efi está o diretorio EFI.
+
+Dentro contém: APPLE, arch_grub e boot. O diretorio APPLE é padrao da apple,
+o diretorio arch_grub foi criado durante a instalacao do arch de acordo com
+o tutorial wiki do arch. Já o diretorio boot foi criado segundo uma dica da
+internet, e contém o mesmo arquivo que está no diretorio arch_grub, porém
+com um nome diferente que é reconhecido pela apple.
+
+O nome é bootx64.efi. Este é o único arquivo que contém no diretorio boot.
+No diretorio arch_grub está o arquivo de nome grubx64.efi.
+O comando diff não acusa nenhuma diferenca entre o bootx64.efi e o grubx64.efi.
+

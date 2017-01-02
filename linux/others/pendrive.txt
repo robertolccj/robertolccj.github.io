@@ -1,0 +1,8 @@
+cfdisk /dev/sdb
+Cria tabela de particao. Nesta etapa, apago toda a tabela. O disco
+fica 'empty'.
+
+Depois formata o disco:
+mkfs -t vfat /dev/sdb 
+ou
+mkfs -t vfat -I /dev/sdb 

@@ -1,0 +1,47 @@
+57, casa 8, Juliana
+
+Baixei a imagem no site do debian, via BotTorrent.
+Verifiquei o md5sum.
+
+Instalei no Pendrive usando o procedimento abaixo:
+Referencia:
+ - https://wiki.archlinux.org/index.php/USB_Installation_Media
+
+dd if=/home/roberto/Downloads/debian-6.0.6-amd64-CD-1.iso of=/dev/sdb
+(demora um pouco ~5min)
+
+Dei o boot no pendrive no meu computador (dell inspiron 1525) e deu
+certo. Apareceu o splash inicial do debian. Mas no computador da
+lorena (lenovo g475) não funcionou. Tentei desabilitar alguns recursos
+na BIOS, mesmo assim nao funcionou. Aparece apenas uma frase na 1a
+linha da tela toda preta. Tentando com uma imagem iso 32bits, pois da
+outra vez instalei uma imagem 32bits e funcionou.
+
+Não deu certo, nem 64bits, nem 32bits...
+
+Instalando via recomendacao no site:
+http://www.debian-administration.org/articles/446
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+consegui via cat imagem.iso > /dev/sdb
+depois sync
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+reiniciei o computador, mas o video tava meio ruim...
+atualizar a lista /etc/apt/source.list;
+
+conectar computador na porta ethernet;
+
+dhcpclient eth0 (conecta dhcp);
+
+Para barulho beep
+Criar arquivo: /etc/modprobe.d/disable-beeb-meu.conf
+com: "blacklist pcspkr"
+
+
+
+
+
+
+
+

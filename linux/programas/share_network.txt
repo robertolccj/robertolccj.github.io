@@ -1,0 +1,100 @@
+Aqui vou escrever uma das maneiras de compartilhar uma rede
+3G que conecta através de um modem com chip de celular.
+Este é o mundo Linux :-)
+
+Os comando utilizados no script são:
+ - ifconfig
+ - dhcpd
+ - iptables
+ - sysctl
+ - hostapd
+
+
+File:/etc/dhcp/dhcpd.conf
+==========================
+ddns-update-style none;
+ignore client-updates;
+authoritative;
+option local-wpad code 252 = text;
+
+subnet
+10.0.0.0 netmask 255.255.255.0 {
+# --- default gateway
+option routers
+10.0.0.1;
+# --- Netmask
+option subnet-mask
+255.255.255.0;
+# --- Broadcast Address
+option broadcast-address
+10.0.0.255;
+# --- Domain name servers, tells the clients which DNS servers to use.
+option domain-name-servers
+10.0.0.1, 8.8.8.8, 8.8.4.4;
+option time-offset
+0;
+range 10.0.0.3 10.0.0.13;
+default-lease-time 1209600;
+max-lease-time 1814400;
+}
+
+
+
+File: hostapd.conf
+=====================
+#change wlan0 to your wireless device
+# --OPEN--------
+interface=wlan0
+driver=nl80211
+ssid=NOME_DA_REDE
+channel=1
+#---sem senha ------------
+#interface=wlan0
+#driver=nl80211
+#ssid=NOME_DA_REDE
+##hw_mode=g
+#channel=1
+#-------------------------
+hw_mode=g
+macaddr_acl=0
+auth_algs=1
+ignore_broadcast_ssid=0
+wpa=3
+wpa_passphrase=PASSWORD
+wpa_key_mgmt=WPA-PSK
+wpa_pairwise=TKIP
+rsn_pairwise=CCMP
+
+
+
+File: initSoftAP
+====================
+#!/bin/bash
+#Initial wifi interface configuration
+#1:wlan0 2:ppp0
+ifconfig $1 up 10.0.0.1 netmask 255.255.255.0
+sleep 2
+###########Start DHCP, comment out / add relevant section##########
+#Thanks to Panji
+#Doesn't try to run dhcpd when already running
+if [ "$(ps -e | grep dhcpd)" == "" ]; then
+dhcpd $1 &
+fi
+###########
+#Enable NAT
+iptables --flush
+iptables --table nat --flush
+iptables --delete-chain
+iptables --table nat --delete-chain
+iptables --table nat --append POSTROUTING --out-interface $2 -j MASQUERADE
+iptables --append FORWARD --in-interface $1 -j ACCEPT
+
+#Thanks to lorenzo
+#Uncomment the line below if facing problems while sharing PPPoE, see lorenzo's comment for more details
+iptables -I FORWARD -p tcp --tcp-flags SYN,RST SYN -j TCPMSS --clamp-mss-to-pmtu
+
+sysctl -w net.ipv4.ip_forward=1
+#start hostapd
+hostapd /etc/hostapd/hostapd.conf 1>/dev/null
+killall dhcpd
+

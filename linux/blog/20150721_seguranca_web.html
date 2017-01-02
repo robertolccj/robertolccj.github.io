@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<title>Segurança na Web</title>
+
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<link rel="alternate" type="application/rss+xml" href="rss.xml" title="Blog do Roberto">
+</head>
+<body>
+<xmp theme="united" style="display:none;">
+
+*21/07/2015 (terça)*
+
+*Escrito por: Roberto Lima*
+
+
+Recentemente estive pensando em como manter seguro os dados que tenho no meu email. Tenho textos, arquivos, mensagens de banco, mensagens de instituições públicas (receita federal, etc), valores de transações financeiras. Enfim, muita coisa importante que não pode parar em mãos erradas.
+
+
+Uma possível solução que andei pesquisando na web foi a idéia do [Mega](https://mega.nz/), um serviço de armazenamento em nuvem que mantém os dados criptografado no servidor. Porém o serviço não expõe o código fonte (source code) do programa. Dessa forma, será realmente confiável?
+
+
+
+### PGP (ou GPG?)
+
+Outra solução que chama atenção é a utilização do PGP, um *sistema de chave pública*. Cada pessoa possui um par de chaves: uma privada e uma pública. A privada, como o nome já sugere, apenas o dono pode ter e deve manter em sigilo máximo. Já a pública deve ser publicada na web (ou enviada por email para os amigos). 
+
+
+Existem também servidores descentralizados (repositório) que armazenam as chaves públicas. Assim qualquer pessoa que desejar enviar um email criptografado para alguém pode consultar se este já possui uma chave pública no repositório.
+
+
+### Webmail com PGP embutido
+
+Um serviço de email que estou utilizando esporadicamente é o [OpenMailBox](https://www.openmailbox.org). De início achava que era um *software livre*, mas como não encontrei o código fonte disponível fiquei um pouco frustado. Porém, este serviço possui uma ferramenta de criptografia PGP. Você pode importar/exportar as chaves (pública e/ou privada), além de haver a possibilidade e ao enviar um email pesquisar no repositório PGP se aquele email possui uma chave pública. Muito interessante.
+
+
+
+</xmp>
+
+<script src="../../strapdown/v/0.2/strapdown.js"></script>
+</body></html>

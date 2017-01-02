@@ -1,0 +1,34 @@
+<html>
+<head>
+<title>Dibetao's Firefox Install</title>
+</head>
+<body>
+<pre>
+Baixei os pacotes tar em:
+http://ftp.mozilla.org/pub/mozilla.org/mozilla.org/firefox/releases/13.0/linux-x86_64/pt-BR/
+
+Ex.: firefox-13.0.tar.bz2
+
+Diretorio: /opt
+Extrair: tar xvfj firefox-13.0.tar.bz2
+
+Backup do arquivo original:
+mv /usr/bin/firefox /usr/bin/firefox-orig
+
+EXEMPLO DE SCRIPT
+EM: /usr/bin
+===================
+
+#!/bin/sh
+
+#FIREFOX="$(which $0)"
+#[ -x "$FIREFOX.real" ] && exec "$FIREFOX.real" "$@"
+
+#exec iceweasel "$@"
+
+Ou apenas
+----------
+/opt/firefox-18.0.2/firefox $@
+
+</pre>
+</body></html>

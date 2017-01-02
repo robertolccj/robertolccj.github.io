@@ -1,0 +1,34 @@
+<html>
+<title>Programas</title>
+<xmp theme="united" style="display:none;">
+
+
+### Plotar em tempo real?
+
+```
+set logscale y
+#plot "< cat output.txt | sed '/^#/ d' | cut -d' ' -f3"
+#set pm3d 
+plot "< cat output.txt | sed '/^#/ d'" u 1:3
+pause 1
+reread
+```
+
+### Grafico a partir de um output (script)
+
+```sh
+#!/bin/bash
+
+gnuplot --persist << EOF
+set logscale y
+set xrange [-10:110];
+plot '< ./LinesTimeMean.m $1' u 1:2:3:4 w errorbars
+EOF
+```
+
+
+</xmp>
+
+<script src="../../strapdown/v/0.2/strapdown.js"></script>
+</html>
+

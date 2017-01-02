@@ -1,0 +1,60 @@
+<html>
+<head>
+<title>Dibetao's Octave</title>
+</head>
+<body>
+<pre>
+
+Salvar arquivo
+================
+i=1;
+nomefile=sprintf("nome%.2d.dat",i);
+save("-ascii",nomefile,"MAT");
+
+ou
+
+printf("Salvando arquivo %s ...",namefile);
+  arq=fopen(namefile,"w");
+  fprintf(arq,"%10.3e %10.3e\n",MAT);%Matriz 2 colunas
+  fclose(arq);
+printf("OK");
+
+
+Diretório para inserir o arquivo octave.vim
+ + /usr/share/vim/vim72/syntax
+
+URL do download do octave.vim
+ + <a href="others/octave.vim">AQUI</a>
+ + http://www.vim.org/scripts/script.php?script_id=3600
+
+Comando para syntax highlight
+ + ":set ft=octave"
+ + ":set ft=matlab"
+
+
+Arquivo ~/.vimrc
+=================
+
+--- COPIAR INICIO ------------
+syntax on      "liga configuracoes de cor 
+set noswapfile "nao cria swp file
+set showmatch  "mostra parenteses aberto-fechado
+"set nowrap     "desabilita a quebra de linha
+set mouse=a    "liga o suporte a mouse
+set nu         "number
+set ts=4       "tabstop
+set sw=4       "shiftwidth
+"set expandtab  "spaces instead tabspace
+set ai         "autoident
+colorscheme koehler
+au BufReadPost * if line("'\"")>0 && line("'\"")<=line("$") | exe "normal g'\"" | endif
+
+" Octave syntax 
+augroup filetypedetect 
+  au! BufRead,BufNewFile *.m,*.oct set filetype=octave 
+augroup END 
+------ COPIAR FIM --------
+
+
+</pre>
+</body></html>

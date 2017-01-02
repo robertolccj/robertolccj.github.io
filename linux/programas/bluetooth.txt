@@ -1,0 +1,17 @@
+
+#Ativar o servico
+systemctl start bluetooth.service
+
+rfkill list
+
+hciconfig hci0 up
+
+
+Para receber arquivos de um celular (por exemplo),
+proceder com a instalação do gnome-user-share
+e configurar as preferencias em gnome-file-share-properties.
+Precisa ativar nao so o recebimento de arquivos
+(receive files over bluetooth), como tambem o compartilhamento
+de aquivos (share files over bluetooth).
+
+

@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<rss version="2.0">
+<channel>
+<title>Dibetao - Linux</title>
+<link> </link>
+<description>Mundo Linux de Dibetao</description>
+<lastBuildDate>Tue, 05 Feb 2013 10:40:00 -0300</lastBuildDate>
+
+<item>
+<title>Adicionado Programas em Linux</title>
+<link>index.html</link>
+<description>Agora pode ser visto outros programas</description>
+<pubDate>Tue, 05 Feb 2013 10:40:00 -0300</pubDate>
+</item>
+
+</channel>
+</rss>

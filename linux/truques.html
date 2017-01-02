@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<title>Truques</title>
+
+<xmp theme="united" style="display:none;">
+
+
+### Comandos Uteis:
+
+Verifica status de conexoes (a: all, n: number address, t: TCP, p: process)
+```bash
+netstat -antp
+```
+
+Scaneia o computador 10.50.50.3 da porta 15000 à 15001
+```bash
+nmap -sS 10.50.50.3 -p 15000-15001
+```
+
+Pinga uma vez (-C 1) os hosts 10.50.50.1 até o 10.50.50.154
+```bash
+fping -C 1 -g 10.50.50.1 10.50.50.254
+```
+
+Cópia de arquivos por SSH
+```bash
+scp andre@192.168.1.1:/usr/src/linux-2.6.14.tar.bz2 /tmp (origem destino)
+
+#Ou
+
+scp arquivos usuario@192.168.0.1:~/
+#copia para o home do usuario.
+```
+
+
+
+### Edita arquivo binario
+
+```file
+vim -b arquivo.txt (edita arquivo binário)
+[:%!xxd] (modo hexa)
+[:%!xxd -r] (volta ao binario)
+[:544,$ d] (apaga da linha 544 até o final do arquivo)
+[:G] (vai até o fim do arquivo)
+[:gg] (vai até o início do arquivo)
+[:? palavra] (procura acima pela string 'palavra')
+[:/palavra] (procura abaixo pela string 'palavra') 
+```
+
+
+</xmp>
+
+<script src="../strapdown/v/0.2/strapdown.js"></script>
+</html>
+

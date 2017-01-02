@@ -1,0 +1,95 @@
+<html>
+<head>
+<title>Dibetao - Xmgrace</title>
+</head>
+<body>
+<pre>
+=============================
+ XMGRACE - Algumas Dicas
+=============================
+
+ Criado em: 10/12/2012
+ Autor: dibetao
+
+Baseados em pesquisa na web e no site:
+
+  http://plasma-gate.weizmann.ac.il/Grace/doc/UsersGuide.html
+
+
+
+Exemplos de arquivos
+=====================
+Voce pode ir direto no 'help / Exemples' na gui (interface) do xmgrace.
+
+ OU
+ 
+Muitos exemplos podem ser encontrados em:
+  /usr/share/grace/examples/
+
+Você poderá recorre a este exemplos se, por exemplo, não souber como
+escrever um sobrescrito para colocar um índice em uma letra.
+
+
+Layout Personalizado
+=====================
+
+Para se ter gráficos com layout padronizado com suas necessidades, voce pode
+copiar o arquivo padrão que se localiza em:
+
+ /usr/share/grace/templetes/Default.agr
+
+Basta criar o diretorio abaixo com este arquivo:
+ ~/.grace/templetes/Default.agr
+
+
+
+Configurando modo de impressão padrão
+======================================
+
+Criar o arquivo:
+ ~/.grace/gracerc.user
+
+Adicionar as seguintes linhas:
+
+HARDCOPY DEVICE "PostScipt"
+DEVICE "PostScript" DPI 300
+
+
+Alterando cores padrao
+=======================
+
+Edite o arquivo Defaults.agr, ou o arquivo que você está trabalhando.
+Vá nas linhas parecida com:
+
+  @map color 7 to (220, 220, 220), "grey"
+
+Edite com as cores que você desejar, incusive renomeie!
+
+
+Histogramas
+============
+
+Quando for fazer algumas transformações 'data / transformation / histograms',
+por exemplo, deve-se selecionar uma 'source', mas não selecione a 'destination'.
+
+
+Meu estilo de gráficos
+=======================
+ + No 'view / page setup' escolho: 
+    - Custom; 
+    - 841,595 pix;
+    - dpi:96
+    
+ + No 'plot / graph appearance':
+   - view port: x(0.2,1.35) e y(0.15,0.95);
+   - legends font size: 180;
+   - axes label 220, ticks label: 220, \f{Times-Italic}
+   - legends font size: 180, location: x:0.8, y:0.9;
+
+
+=======
+= FIM =
+=======
+
+</pre>
+</body></html>

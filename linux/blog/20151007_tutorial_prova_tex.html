@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<title>Provas em TeX</title>
+
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<link rel="alternate" type="application/rss+xml" href="rss.xml" title="Blog do Roberto">
+</head>
+<body>
+<xmp theme="united" style="display:none;">
+
+
+*07/10/2015 (quarta)*
+
+*Escrito por: Roberto Lima*
+
+#### Pacotes matemáticos opcionais
+
+```tex
+\usepackage{amsmath}
+\usepackage{amsbsy}
+\usepackage{latexsym}
+\usepackage{amssymb}
+\usepackage{ifsym}
+```
+
+
+#### Customiza as margens da folha
+
+```tex
+\usepackage[
+	top=1.5cm,
+	bottom=1.5cm,
+	left=1.5cm,
+	right=1.5cm,
+	headsep=10pt,
+	a4paper]
+	{geometry} 
+```
+
+
+
+#### Não quebrar equação matemática
+
+Inserir chaves dentro do ambiante matemático 'em linha' (inline).
+
+```
+${x=y+2}$
+```
+
+
+#### Ambiente *itemize*: retira espaço à esquerda
+
+```tex
+\usepackage{enumitem}
+
+\begin{itemize}[leftmargin=*]
+\item Esfera metálica.
+\end{itemize}
+```
+
+
+
+#### Inserir linha para escrita (horizontal)
+
+```tex
+\line(1,0){470} \par
+```
+
+#### Começar texto em uma página ìmpar
+
+```tex
+\cleardoublepage
+\newpage
+```
+
+
+
+#### Inserir espaçamento horizontal
+
+```tex
+\vfill %preenche completamente o espaço entre dois parágrafos.
+
+\vspace{1cm} %preenche apenas 1cm
+```
+
+#### Figura: posicionamento forçado
+
+Para obrigar posicionamento da figura: usar *H*
+
+```tex
+\usepackage{float}
+
+\begin{figure}[H]
+\includegraphics[scale=0.45]{figs/circuito01.png}
+\end{figure}
+```
+
+#### Tabela: altura da célula/linhas
+
+```tex
+\begin{table}
+\renewcommand*\arraystretch{1.25} %Altura das linhas
+\begin{tabular}{|c|c|c|}
+.
+.
+\end{tabular}
+\end{table}
+```
+
+
+
+#### Caption: figuras e tabelas
+
+Inserir código no preâmbulo:
+
+```tex
+\setlength{\abovecaptionskip}{5mm}
+\setlength{\belowcaptionskip}{2mm}
+```
+
+
+#### Ambiente *minipage*
+
+Uma minipágina de 40% da largura do texto (linha de texto).
+
+```tex
+\begin{minipage}[t]{0.48\textwidth}
+	Texto dentro da mini página.
+\end{minipage}
+```
+
+
+
+#### Combilar com o *biber*
+
+O biber aceita caracteres utf8 (é o furturo!)
+
+```tex
+\usepackage[
+style=numeric,
+citestyle=numeric,
+sorting=nyt,
+sortcites=true,
+autopunct=true,
+babel=hyphen,
+hyperref=true,
+abbreviate=false,
+backref=true,
+backend=biber
+]{biblatex}
+
+```
+
+
+
+
+#### Ambiente com loop
+
+```tex
+% Número de Linhas para anotações
+
+% introduce a dummy counter, initially 0    
+\newcount\tmp
+
+\newcommand{\nlinhas}[1]{% need this to prevent extra vertical space
+    % #1: image path and core part of name
+    % #2: maximum number
+    \tmp=0
+
+\begin{tcolorbox}[breakable,
+enhanced jigsaw,
+fonttitle=\bfseries,
+%title=Anotações,
+opacityframe=0.5, opacityback=0.25, opacitybacktitle=0.25, opacitytext=0.8,
+%colback=red!5!white, colframe=red!75!black, colbacktitle=yellow!20!red,
+width=\linewidth+0.5cm,
+enlarge left by=-0.5cm
+]
+
+    \loop
+        % increment dummy counter
+        \advance\tmp by 1
+        % include the image
+        %%\includegraphics[scale=0.6]{#1\number\tmp.pdf}
+        \vspace{6mm}\rule{\linewidth}{0.0mm} %Linha "invisível"
+        
+        % repeat the loop provided the counter is within specified bound
+        \ifnum\tmp<#1
+    \repeat
+
+\end{tcolorbox}
+}
+
+```
+
+
+
+
+
+</xmp>
+
+
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES * * */
+    var disqus_shortname = 'blogdoroberto';
+    
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+
+
+
+<script src="../../strapdown/v/0.2/strapdown.js"></script>
+</body></html>

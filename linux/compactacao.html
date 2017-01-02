@@ -1,0 +1,42 @@
+<html>
+<head>
+<title>Dibetao's Compactação</title>
+</head>
+<body>
+<pre>
+
+Compactação TAR.GZ (tar e gzip)
+===============================
+Compactar:
+user@linux:~$ tar cvfz arquivo.tar.gz  [arquivos | diretório]
+
+Descompactar:
+user@linux:~$ tar xvfz arquivo.tar.gz
+
+Compacta todos cas e dat, e com qualquer caractere em “??”
+user@linux:~$ tar cvfz pacote.tar poro07_??_ord1.{cas,dat}
+
+Adicionar no append do tar
+user@linux:~$ tar -rf pacote.tar arquivo.txt
+
+
+
+Gzip (compacta e substitui pelo .gz)
+=====
+user@linux:~$ gzip -v teste.txt
+obs: arquivo resultante teste.txt.gz
+
+visualizar: gzip -cd teste.txt.gz
+
+
+Compactação ZIP
+===============
+Compactar:
+user@linux:~$ zip -r nome_diretorio nome_diretorio
+Descompactar
+user@linux:~$ unzip arquivo.zip
+
+
+
+</pre>
+</body></html>

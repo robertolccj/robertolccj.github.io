@@ -1,0 +1,72 @@
+Ibernacao no Debian Squeeze (6.0.5)
+
+Instalei os pacotes:
+aptitude install hibernate
+aptitude install pm-util
+
+Com o pacote "hibernate", um comando aparece para hibernar:
+root@orion:~# hibernate
+
+Para aparecer a opcao hibernar e suspende no gnome
+na janela de desligar, eh necessario o pacote pm-util
+depois de reiniciar (ou talvez logout) aparecem as opcoes :)
+Funciona perfeitamente.
+
+Problema:
+=====================================================
+
+Eu tinha o ubuntu em outra particao e dei o boot por ele e
+instalei o hibernate e outros pacotes. O problema eh que como
+o Debian foi o ultimo Linux a ser instalado, a particao swap
+foi alterada, e o Ubuntu nao montava o swap. Fiz com que o
+ubuntu montasse com o comando:
+roberto@orion:~$ sudo mkswap /dev/sda3
+
+Logo a UUID da particao mudou, e quando retornei para o Debian
+a swap nao montava mais, nem apareceu a opcao hibernar, somente
+a opcao suspender, tendo em vista que a suspender usa a ram.
+
+Quando eu dava o comando hibernat como root, aparecia a mensagem:
+root@orion:~# hibernate
+hibernate:Warning: Tuxonice binary signature file not found.
+
+e o computador desligava (como estivesse hibernando), mas quando eu
+ligava na verdade nao tinha hibernado e a tela de login aparecia.
+
+
+Correcao:
+=======================================================
+fonte: https://bugs.launchpad.net/ubuntu/+source/util-linux/+bug/66637
+theared: #23
+
+1. Determinar o disco que eh swap
+root@orion:~# fdisk -l
+-No caso encontrei /dev/sda3
+
+2. Fazer o mkswap na particao wap
+root@orion:~# mkswap /dev/sda3
+setting up swapspace version 1, size = 1052252 KiB
+no label, UUID=8cd084d5-6b0a-4efc-9189-4ac0e95bab09
+
+3. Usar o UUID gerado para colocar no fstab e no resume
+root@orion:~# vim /etc/fstab
+root@orion:~# vim /etc/initramfs-tools/conf.d/resume
+
+4. update-initramfs -u
+
+5. Reiniciar.
+
+Quando o sistema reiniciar, verifique se a swap esta ativa:
+root@orion:~# swapon -s
+
+e o comando para ver as UUID
+root@orion:~# ls -la /dev/disk/by-uuid/
+
+===========================================================
+
+Quando eu deu um hibenate no terminal, a mensagem novamente apareceu e
+o computador desligou, mas quando eu liguei TINHA REALMENTE HIBERNADO :)
+
+Status: Resolvido
+
+#FIM

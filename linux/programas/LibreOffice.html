@@ -1,0 +1,74 @@
+<html>
+<head>
+<title>Instalando LibreOffice</title>
+</head>
+<body>
+<pre>
+=========================================================
+Procedimentos que usei para instalar o LibreOffice 3.6.1
+Data: 29/08/2012
+Autor: Roberto Lima
+=========================================================
+
+O procedimento usado aqui refere-se a uma instalação em um laptop
+que usa Debian 6.0 64bits. Procedimento baseado no site [1].
+
+Primeiramente entrar no site do LibreOffice e baixar os pacotes:
+ + http://download.documentfoundation.org/libreoffice/
+   stable/3.6.1/deb/x86_64/LibO_3.6.1_Linux_x86-64_install-deb_en-US.tar.gz
+
+ + http://download.documentfoundation.org/libreoffice/
+   stable/3.6.1/deb/x86_64/LibO_3.6.1_Linux_x86-64_langpack-deb_pt-BR.tar.gz
+
+ + http://download.documentfoundation.org/libreoffice/
+   stable/3.6.1/deb/x86_64/LibO_3.6.1_Linux_x86-64_helppack-deb_pt-BR.tar.gz
+
+Todos os pacotes  .tar.gz contem arquivos .deb para instalacao via dpkg.
+Observe no link a referencia aos pacotes deb.
+A instalacao dos pacotes segue o ordem dos arquivos acima.
+
+
+Mirror. RPN (ufc)
+http://mirror.pop-ce.rnp.br/mirrors/tdf/libreoffice/stable/3.6.4/deb/x86_64/
+
+Desinstalar o antigo LibreOffice
+=================================
+
+root@orion:~# aptitude -P purge ~nlibreoffice
+
+Apareceu alguns pacotes que nao estavam instalados, mas algumas sugestoes
+foram dadas pelo programa. Eu aceitei e... feito! :-)
+
+---
+Os itens no menu iniciar ainda estavam la, mas quando eu reiniciei o
+ambiente grafico (logout-login) eles desapareceram :-)
+---
+obs: Desta vez, os icones desapareceram do menu iniciar sem precisar
+     reiniciar o ambiente grafico - Usando XFCE
+
+
+Para instalar
+===============
+
+Etapas:
+  1a. Pacote "install"
+   - Entrar no diretorio 'DEB' e rodar: dpkg -i *.deb
+   - Entrar no 'desktop-integration', e rodar: dpkg -i *.deb
+
+  2a. Pacote "langpack" (mesmos de 1a)
+  3a. Pacote "helppack" (mesmos de 1a)
+
+
+Rodar o libreoffice
+====================
+
+Ajustar os locales para pt-br :)
+
+==========
+Referencia:
+[1] http://www.libre-software.net/how-to-install-libreoffice-on-ubuntu-linux-mint
+
+****** FIM *******
+</pre>
+</body>
+</html>

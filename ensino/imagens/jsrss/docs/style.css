@@ -1,0 +1,58 @@
+.header
+{
+	position: relative;
+	height: 60px;
+	width : 600px;
+	background-color:darkgreen;
+}
+
+.body
+{
+	border: 1px solid silver;
+	padding-left:10px;
+	width : 588px;
+}
+
+i
+{
+	color:green;
+}
+
+#code
+{
+	background-color:#C0C0C0;
+	width:580px;
+	overflow:auto;
+}
+
+.title
+{
+	font-size: 26px;
+	padding-top: 10px;
+	padding-left: 26px;
+	color: #fff;
+}
+
+.scriptName
+{
+	float:left;
+	font-size: 14px;
+	padding-left: 26px;
+	color: #fff;
+}
+
+.version
+{
+	float:right;
+	font-size: 14px;
+	padding-right: 10px;
+	color: #fff;
+}
+
+.footer
+{
+width: 588px;
+padding-left:10px;
+text-align: center;
+color: black;
+}

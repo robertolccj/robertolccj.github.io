@@ -1,0 +1,276 @@
+Editar o /etc/apt/sources.list
+Ex. nano sources.list
+Atualizar os pacotes (repositorios BR)
+
+Ref1: debianhelp.wordpress.com/2011/11/06/to-do-list-after-installing-debian-squeeze/
+
+
+Adicionar
+================
+deb http://www.debian-multimedia.org stable main non-free
+
+No Terminal:
+gpg --keyserver keys.gnupg.net --recv-key 1F41B907
+gpg --export --armor 1F41B907 | apt-key add -
+aptitude update
+aptitude upgrade
+
+
+Bash-completion (~/.bashrc)
+============================
+Adicionar o codigo abaixo no final do arquivo
+
+if [ -f /etc/bash_completion ]; then
+. /etc/bash_completion
+fi
+
+
+
+apt-get update
+aptitude -s install wireless-tools 
+
+aptitude -s install firmware-b43-lpphy-installer
+modprobe b43
+modprobe b43legacy 
+apt-get -s install network-manager-gnome
+apt-get install module-assistant
+apt-get install build-essential
+apt-get install wpasupplicant 
+/etc/init.d/networking restart
+
+
+(OBS: desinstalei o firmware-b43-lpphy-installer e quando reinstalei o
+modulo b43 nao carregava mais quando dava o boot, tive que colocar ele no
+arquivo /etc/modules)
+
+Acho que aqui a rede deve estar disponivel
+
+Comandos para testes:
+ifconfig
+ifconfig wlan0 down
+iwconfig wlan0 mode ad-hoc
+ifconfig wlan0 up
+iwlist wlan0 scanning
+
+======================================================
+Gnome Password Keyring (menager)
+#aptitude install seahorse
+
+obs: precisei, pois quando faco login automatico, para conectar
+a rede precisava de senha, e ficava aparecendo a janela do keyring
+pedindo para autenticar (por senha). Isso nao acontecia se eu fizesse
+login normalmente (sem ser auto login).
+======================================================
+Instalando pacotes adicionais:
+aptitude install gnome-system-monitor 
+OBS: Antes eu coloquei o "system-monitor" na barra perto
+do relogio, mas ao clicar dava um erro dizendo nao ter encontrado
+o comando gnome-system-monitor. Depois de instalar este pacote, ao
+clicar no icone o monitor de sistema aparece :)
+
+aptitude install vim
+obs: antes eu editava com o 'nano' ou 'vi' :(
+
+aptitude install vim-gnome
+obs: depois que eu instalei este pacote, consegui
+     copiar colar com o botao do meio do mouse.
+
+
+aptitude install gnome-screenshot
+OBS: pegar o screenshot. Antes dava um erro ao
+clicar no 'print screen' do teclado, dizendo que nao
+encontrou o comando. Agora funciona :)
+
+=======================================================
+Firefox 13
+
+baixei o pacote tar.
+link:
+http://ftp.mozilla.org/pub/mozilla.org/mozilla.org/firefox/releases/13.0/linux-x86_64/pt-BR/
+
+firefox-13.0.tar.bz2
+
+comando tar xvfj firefox-13.0.tar.bz2
+copiei para /opt
+mv /usr/bin/firefox /usr/bin/firefox-old
+link simbolico "ln -s /opt/firefox/firefox /usr/bin/firefox
+
+Flash plugin (baixa do site)
+aptitude install flashplugin-nonfree 
+
+Java Plugin (acesso banco brasil)
+aptitude install sun-java6-plugin 
+=======================================================
+SOM
+
+root@orion:~# aptitude install w64codecs
+root@orion:~# aptitude install gstreamer0.10-fluendo-mp3
+
+Agora o Som MP3 Pegou :)
+
+root@orion:~# aptitude install libdvdcss2
+Acho q pra pegar DVD (??)
+
+OUTROS
+root@orion:~# aptitude install ffmpeg sox twolame vorbis-tools lame faad gstreamer0.10-ffmpeg gstreamer0.10-plugins-bad avifile-divx-plugin
+
+=======================================================
+Calculadora 
+aptitude install gcalctool
+
+LibreOffice (atraves do backport adincionado no sources.list)
+aptitude -t squeeze-backports install -s libreoffice
+
+[edited] depois de um tempo nao gostei deste metodo, pois o libreoffice
+eh atualizado no site libreoffoce.org com mais constancia. E la
+existem pacotes .deb, uma maneira melhor de instalar :)
+dpkg -i *.deb
+========================================================
+Transmission (torrent)
+apt-get install transmission
+
+aptitude install synaptic
+aptitude install update-manager-gnome
+aptitude install gdebi
+
+========================================================
+aptitude install hibernate
+Nao consegui hibernar com usuario normal, apenas como root (menos mal)
+tentando com o pacote abaixo.
+aptitude install pm-utils
+OBS:
+Quando fiz logout, o computador parece que travou, entao apertei o
+botao desligar. Quando liguei novamente as opções hibernar e suspender apareceram :)
+========================================================
+Fontes da Microsoft 
+aptitude install ttf-mscorefonts-installer (instalei junto com wine)
+
+aptitude -s build-essential
+========================================================
+Player de som, video, pega webcam, etc.
+aptitude -s install mplayer
+========================================================
+aptitude -s install gnome-schedule (for script 'alerta')
+aptitude -s install grsync (for backup)
+
+java from source
+path:/usr/lib/jvm/
+file from chrome:
+/usr/lib/jvm/jre1.7.0_05/lib/amd64/libnpjp2.so
+
+chrome path:/opt/google/chrome
+
+aptitude -s install xfig
+
+aptitude -s install grace (for xmgrace)
+aptitude -s install gnuplot
+aptitude -s install octave
+
+aptitude -s install texlive
+aptitude -s install texlive-extra-utils
+aptitude -s install texlive-base (talvez)
+
+lyx from sources tar.gz (site)
+aptitude install libqt4-core libqt4-dev (required for lyx)
+
+11/12/2012
+aptitude install texlive-full
+
+obs: talvez nao seja necessario instalar o 'full', porem existem pacotes
+como o texlive-latex-extra e texlive-math-extra que parecem ser necessarios
+para um bom ambiente latex.
+
+XFCE
+========
+aptitude install xfce4 (instalar XFCE 4)
+xfce4-terminal
+choice leafpad or mousepad (editor, I prefer mousepad)
+xfce-battery-plugin
+xfce4-systemload-plugin
+xfce4-power-manager
+aptitude install thunar-thumbnailers (preview images on thunar)
+aptitude install ristreto (picture viewer)
+aptitude install xfce4-mixer (sound volume)
+aptitude install xfce4-goodies
+
+
+Scaner HP
+=============
+hplip
+simple-scan
+xsane
+gocr (reconhece texto)
+
+
+Rip CD / Convert MP3 (28/09/2012)
+=================================
+aptitude -s install cdparanoia 
+aptitude -s install lame (ja estava instalado)
+
+Formatar Pendrive em vfat
+==========================
+root@orion:/# aptitude -s install dosfstools
+
+Uso:
+mkfs.vfat /dev/sdb1
+
+Olhar qual 'dev' em 'dmesg'
+
+
+Pendrive Boot imagem ISO
+=========================
+root@orion:/# aptitude -s install unetbootin
+
+opcao no menu: Application>System Tools>UNETBootIn
+
+
+Impressora
+============
+Olhar: 	http://localhost:631/
+
+Ferramenta no gnome [1].
+root@orion:# aptitude install system-config-printer
+(apareceu menu: System>Administration>Printing)
+
+
++ ALGUMAS SAIDAS - Terminal
+
+root@orion:/# lpstat -r
+scheduler is running
+root@orion:/# lpstat -d
+system default destination: HP_Officejet_J4660_series
+root@orion:/# lpq
+HP_Officejet_J4660_series is ready
+no entries
+root@orion:/#
+
+Referencia:
+[1] http://wiki.debian.org/SystemPrinting
+
+
+Record My Desktop (11/09/2012)
+==============================
+aptitude -s install recordmydesktop (por linha de comando)
+aptitude -s install mencoder (debian-multimidia)
+
+========
+FIM
+
+
+Outros: *********************************************************
+
+
+Google Chrome (google-chrome-stable)
+======================================
+Eh necessario fazer (como root):
+wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | sudo apt-key add -
+
+Eh necessario instalar o pacote .deb disponivel no site do google.
+Dar o comando "dpkg -i pacote.deb"
+Sera criado um arquivo em: /etc/apt/sources.list.d/[algumacoisa]
+
+Informacoes em:
+http://www.google.com/linuxrepositories/
+
+
+

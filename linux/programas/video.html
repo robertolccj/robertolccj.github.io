@@ -1,0 +1,40 @@
+<html>
+<head>
+<title>Dibetao's Video</title>
+</head>
+<body>
+<pre>
+
+Gravar Tela - Desktop
+Programa gtk-recordmydesktop
+transormar de ogv para avi:
+mencoder -idx video.ogv -ovc lavc -oac mp3lame -o video.avi
+
+Gerar filme a partir de arquivos ".jpg"
+roberto@linux:~$ mencoder mf://\*.jpg -mf fps=10:type=jpg:w=800:h=600 -ovc lavc -lavcopts vcodec=mpeg4:aspect=4/3:vbitrate=800 -o video.avi
+roberto@linux:~$ mencoder mf://\*.jpg -mf fps=12/51 -ovc lavc -lavcopts vcodec=mpeg4:aspect=4/3 -audiofile musica1.mp3 -oac copy -o video.avi
+
+Unir arquivos de vídeo:
+roberto@linux:~$ mencoder -ovc lavc -oac lavc 001.avi 002.avi 003.avi -o output.avi
+
+Unir aquivos com um audio diferente:
+roberto@linux:~$ mencoder -ovc lavc -oac lavc -audiofile musica.mp3 day.avi musica.avi -o output.avi
+
+Dividir por tempo:
+roberto@linux:~$ mencoder arquivo.avi -o arquivo_parte1.avi -ovc copy -oac copy -endpos hh:mm:ss
+roberto@linux:~$ mencoder arquivo.avi -o arquivo_parte2.avi -ovc copy -oac copy -ss hh:mm:ss
+
+Dividir por tamanho:
+roberto@linux:~$ mencoder arquivo.avi -o arquivo_parte1.avi -ovc copy -oac copy -endpos xxx[b/kb/mb]
+roberto@linux:~$ mencoder arquivo.avi -o arquivo_parte2.avi -ovc copy -oac copy -sb xxx[b/kb/mb]
+
+Extrair o áudio em mp3:
+roberto@linux:~$ mplayer -vo null -dumpaudio -dumpfile arquivo.mp3 arquivo.avi
+
+Tranformar Flash em AVI:
+roberto@linux:~$ ffmpeg -i input.flv output.avi
+ou
+roberto@linux:~$ mencoder -idx input.ogv -ovc lavc -oac mp3lame -o output.avi
+
+</pre>
+</body></html>

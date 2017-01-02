@@ -1,0 +1,392 @@
++ [Áudio](audio.html)
++ [Vídeo](video.html)
++ [Compactação](compactacao.html)
+
+
+### Saber qual distribuição está usando
+
+```
+cat /etc/issue
+cat /etc/debian_version
+```
+
+### Teclado internacional
+
+Problemas com acentuação em um teclado que não possui o cedilha (teclado internacional).
+
+```
+setxkbmap -model pc104 -layout us_intl
+```
+
+
+### Arquivo de configuracao do vim
+
+```
+"Arquivo de Configurações do Vim (.vimrc) - Para programa em C/C++
+syntax on "syntax highlight
+set showmatch "mostra caracteres ( { [ quando fechados
+set textwidth=79 "largura do texto
+set nowrap "sem wrap (quebra de linha)
+set mouse=a "habilita todas as acoes do mouse
+set nu "numeracao de linhas
+set ts=4 "Seta onde o tab para
+set sw=4 "largura do tab
+set et "espacos em vez de tab
+colorscheme blue "cor de fundo azul - MUITO BOM
+<tt>au BufReadPost * if line("'\"")>0 && line("'\"")<=line("$") | exe "normal g'\"" | endif </tt>
+```
+
+### Central Multimídia
+
+[OpenElec](http://openelec.tv/) para o Raspberry Pi
+
+
+### AMSN:
+
+Amsn travando? Digite no konsole:  export LD_ASSUME_KERNEL=2.2.5
+
+SSH no Inicio
+
+> Edite o /etc/rc.d/rc.local
+> Adicione no final: echo "Starting sshd..." /usr/local/sbin/sshd
+
+
+### SCRIPT OPENGL-MEU
+
+
+```
+#!/bin/sh
+clear
+echo "--------------------------"
+echo "Script Escrito por ROBERTO"
+echo "DIBETAO@GMAIL.COM"
+echo "--------------------------"
+echo " "
+
+if [ "$2" == '' ]; then
+echo "ERRO: Especifique um nome para o programa."
+echo "Ex.: opengl-meu fonte.c nome_prog"
+else
+gcc -I/usr/X11R6/include $1 -L../lib -lglut -lGLU -lGL -lm -o $2
+fi
+```
+
+
+
+### MONTAR PEN DRIVER
+
+Adicionar no /etc/fstab
+
+````
+/dev/sda1 /mnt/nome vfat noauto,user,umask=000 0 0
+````
+
+No konqueror, é automaticamente adicionado nos DISPOSITIVOS.
+Qualquer usuario pode montar.
+
+
+
+### CRONTAB - AGENDADOR
+
+```ssh
+#[minutos] [horas] [dias do mês] [mês] [dias da semana] [usuário] [comando]
+#tarefa infowester
+30 22 2,10 * * echo "InfoWester - Conhecimento é um bem de todos"
+
+crontab -e (editar)
+00 12 * * * wget
+
+crontab -l (listar)
+```
+
+
+Meu exemplo
+
+```
+#[minutos] [horas] [dias do mês] [mês] [dias da semana] [comando]
+#00 01 23 02 * wget -c ftp://ftp.pucpr.br/eclipse/eclipse/downloads/drops/R-3.1.2-200601181600/eclipse-SDK-3.1.2-linux-gtk.tar.gz
+#00 01 15 03 * wget -c http://fisica.ufpr.br/kurumin/kurumin-6.0-beta1a.iso
+#00 01 24 03 * wget -c http://fisica.ufpr.br/kurumin/kurumin-6.0-beta2.iso
+```
+
+
+### REDE NO DEBIAN (Sem servidor DHCP)
+
+Aquivo /etc/network/interfaces
+
+```
+#The loopback network interface
+auto lo
+iface lo inet loopback
+
+iface eth0 inet static
+address 10.50.50.7
+netmask 255.255.255.0
+broadcast 10.50.50.255
+network 10.50.50.0
+gateway 10.50.50.1
+
+auto eth0
+```
+
+
+
+
+### CHMOD
+
+Mudar permissoes do aquivo
+
+```
+chmod [ugoa] {-+} nome_do_arquivo
+u: usuario
+g: grupo
+o: outros
+a: all (todos)
+```
+
+
+
+### CHOWN:
+
+Mudar dono do aquivo
+
+```
+chown roberto:roberto nome_do_arquivo
+```
+
+
+### FIND:
+
+Localizar Arquivos
+
+`$ find /diretorio_de_procura -name nome_do_arquivo"`
+
+Ex.:
+
+`$ find / -name readme*`
+
+Vai procurar todos os arquivos do diretorio raiz / que comecam por readme
+
+
+
+### CHROOT:
+
+Torna-se root em uma particao ou hd
+
+`$ chroot`
+
+
+
+### RODANDO PROGAMA EM SEGUNDO PLANO
+
+```
+$ ./a.out &
+```
+
+
+### OLHAR TRABALHOS QUE ESTAO RODANDO
+```
+$ jobs
+$ jobs -l
+```
+
+
+### MATAR APLICATIVOS
+
+`$ kill -9 (PID do aplicativo)`
+
+> Olha-se o PID do aplicativo com o comando top, ps, ps aux, jobs, jobs -l
+
+Pode -se colocar o aplicativo em segundo plano com
+o as tevlas Ctrl+z , mas assim voce para o plograma. Para coloca-lo
+em segundo plano (mas rodando) voce tem que dar o comando "bg [1]" ou
+"bg nome_do_programa", para colocalo em primeiro plano "fg..."(foreground)
+
+
+
+### INSTALAR IMPRESSORA WINDOWS COM CUPS:
+
+1. Abra o seu navegador e digite na barra de endereço:
+
+> http://localhost:631
+
+2. Clique em "Manage Printers". Caso solicitado, entre com o usuário root e a senha.
+
+3. Depois clique em "Add Printer" (está no canto inferior esquerdo).
+
+4. Preencha o formulário: nome, localização e descrição (pode preencher com qualquer coisa, não faz diferença).
+
+5. Depois "Continue". Agora na caixa "Device", vá na última opção do
+caixa combo: "Windows Printer via Samba". Depois "Continue".Na caixa "Device URI", digite:
+`smb://guest@[Endereço da maquina]/[Nome da impressora]`
+
+Exemplo: `smb://guest@192.168.254.30/HP840C`
+
+
+Vamos aos significados:
+
+1. "guest" = convidado (você pode colocar o nome de um usuário da máquina Windows XP ,
+se preferir;
+
+2. [Endereço da máquina]= pode ser o IP ou o nome da máquina. No caso de Ip,
+certifique-se que a máquina usa IP Fixo.
+
+3. [Nome da Impressora] = certifique-se do nome dado ao "compartilhamento"
+da impressora no Windows.
+
+Agora basta escolher a marca da impressora, e pronto.
+Caso você não encontre sua impressora, procure instalar uma genérica. Mesmo
+assim havendo dificuldades com a marca da impressora, visite: www.linuxprinting.org,
+baixe o driver e siga as orientações de instalação.
+
+
+
+### Declarando variaveis Globais
+
+`arquivo __> /etc/profile ; alterar o PATH`
+
+
+
+### COMPARTILHAR IMPRESSORA CUPS
+
+Reiniciar Cups "/etc/init.d/cupsys" + (stop) (start) (reload)
+
+Arquivo: /etc/cups/cupsd.conf
+
+HostNameLookups On #BETO
+Browsing On #BETO
+
+```
+<Location />
+Order Deny,Allow
+Deny From All
+Allow From 127.0.0.1
+Allow From 10.50.50.* #BETO
+</Location>
+```
+
+OBS: Podemos olhar algo no /etc/hosts.allow
+
+
+### Configurar Mouse
+
+```
+#/bin/bash!
+synclient LeftEdge=50
+synclient RightEdge=900
+synclient TopEdge=140
+synclient BottomEdge=680
+synclient ClickFinger1=1
+synclient ClickFinger2=3
+synclient ClickFinger3=2
+synclient HorizEdgeScroll=0
+synclient VertEdgeScroll=1
+synclient VertTwoFingerScroll=0
+synclient HorizTwoFingerScroll=0
+synclient HorizScrollDelta=20
+synclient VertScrollDelta=20
+synclient PressureMotionMinZ=30
+synclient PressureMotionMaxZ=160
+synclient PressureMotionMinFactor=1
+synclient PressureMotionMaxFactor=1
+synclient FingerLow=18
+synclient FingerHigh=23
+synclient FingerPress=256
+synclient PalmDetect=1
+synclient PalmMinWidth=10
+synclient PalmMinZ=200
+synclient MinSpeed=1
+synclient MaxSpeed=1.5
+synclient AccelFactor=0.10
+synclient MaxTapMove=110
+synclient MaxTapTime=366
+synclient MaxDoubleTapTime=180
+synclient TapButton1=1
+synclient TapButton2=2
+synclient TapButton3=3
+synclient RTCornerButton=2
+synclient RBCornerButton=3
+synclient LTCornerButton=0
+synclient LBCornerButton=0
+```
+
+
+
+
+
+
+### TouchPad
+
+```
+#!/bin/bash
+#Parameter settings:
+synclient LeftEdge=153
+synclient RightEdge= 870
+synclient TopEdge=115
+synclient BottomEdge=652
+synclient FingerLow=12
+synclient FingerHigh=14
+synclient FingerPress=127
+synclient MaxTapTime=180
+synclient MaxTapMove=56
+synclient MaxDoubleTapTime=180
+synclient SingleTapTimeout=180
+synclient ClickTime=100
+synclient FastTaps=0
+synclient EmulateMidButtonTime=75
+synclient EmulateTwoFingerMinZ=139
+synclient EmulateTwoFingerMinW=7
+synclient VertScrollDelta=25
+synclient HorizScrollDelta=25
+synclient VertEdgeScroll=1
+synclient HorizEdgeScroll=0
+synclient CornerCoasting=0
+synclient VertTwoFingerScroll=0
+synclient HorizTwoFingerScroll=0
+synclient MinSpeed=0.4
+synclient MaxSpeed=0.7
+synclient AccelFactor=0.0391236
+synclient TrackstickSpeed=40
+synclient EdgeMotionMinZ=14
+synclient EdgeMotionMaxZ=79
+synclient EdgeMotionMinSpeed=1
+synclient EdgeMotionMaxSpeed=102
+synclient EdgeMotionUseAlways=0
+synclient UpDownScrolling=1
+synclient LeftRightScrolling=1
+synclient UpDownScrollRepeat=1
+synclient LeftRightScrollRepeat=1
+synclient ScrollButtonRepeat=100
+synclient TouchpadOff=0
+synclient GuestMouseOff=0
+synclient LockedDrags=0
+synclient LockedDragTimeout=5000
+synclient RTCornerButton=0
+synclient RBCornerButton=0
+synclient LTCornerButton=0
+synclient LBCornerButton=0
+synclient TapButton1=1
+synclient TapButton2=3
+synclient TapButton3=2
+synclient ClickFinger1=1
+synclient ClickFinger2=1
+synclient ClickFinger3=1
+synclient CircularScrolling=0
+synclient CircScrollDelta=0.1
+synclient CircScrollTrigger=0
+synclient CircularPad=0
+synclient PalmDetect=0
+synclient PalmMinWidth=10
+synclient PalmMinZ=99
+synclient CoastingSpeed=0
+synclient PressureMotionMinZ=14
+synclient PressureMotionMaxZ=79
+synclient PressureMotionMinFactor=1
+synclient PressureMotionMaxFactor=1
+synclient GrabEventDevice=1
+synclient TapAndDragGesture=1
+synclient AreaLeftEdge=0
+synclient AreaRightEdge=0
+synclient AreaTopEdge=0
+synclient AreaBottomEdge=0
+```

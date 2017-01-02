@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+<title>Dicas 2</title>
+
+<xmp theme="united" style="display:none;">
+
+### Dicas 2:
+
+Uma dica rapida, principalmente para quem esta comecando a trabalhar
+com $latex \LaTeX$.
+
+Ha tempos nao eh mais necesario comandos como \'a ou \^e para escrever os acentos.
+Basta inserir o seguinte comando após o \documentclass:
+
+```latex
+\usepackage[latin1]{inputenc}
+```
+
+e agora pode escrever incluindo os acentos normalmente.
+
+edit:
+Como sugerido pelo semente, o comando pode ser substituido por
+
+```latex
+    \usepackage[utf8]{inputenc}
+```
+
+para que a codificação do arquivo seja mantida no formato utf-8
+(padrão do Ubuntu)
+
+
+
+
+### Problema com chave no APT-GET:
+
++ Problema
+
+```
+W: GPG error: http://ftp.debian-unofficial.org etch Release: The following signatures couldn't be verified because the public key is not available: NO_PUBKEY 394D199524C52AC3
+W: You may want to run apt-get update to correct these problems
+```
+
++ Solucao
+
+```sh
+root@fick:/home/taylor/roberto\>> gpg --keyserver wwwkeys.eu.pgp.net --recv-keys 394D199524C52AC3 
+
+gpg: WARNING: nothing exported
+gpg: requesting key 24C52AC3 from hkp server wwwkeys.eu.pgp.net
+gpg: no valid OpenPGP data found.
+gpg: key 24C52AC3: public key "Debian Unofficial Archive Automatic Signing Key (2007) <ftpmaster@debian-unofficial.org>" imported
+gpg: no ultimately trusted keys found
+gpg: Total number processed: 1
+gpg:               imported: 1
+
+
+root@debian:/home/taylor/roberto\>> gpg --armor --export 394D199524C52AC3  |apt-key add -
+
+OK
+```
+
+
+
+### Problema com som (ALSA)
+
++ Como root, dar o comando "alsaconf"...
++ entao, escolher a opcao ALSA e OK...
++ depois aparece uma pergunta...responder sim...
++ entao o sistema irá configurar o som ALSA.
+
+Depois dê o comando "esd"..e vc deverá escutar um toque.
+
+Ok...som configurado.
+
+
+### Velocidade do HD:
+```
+kurumin@orion:~$ sudo hdparm -t /dev/hda2
+
+/dev/hda2:
+ Timing buffered disk reads:   86 MB in  3.04 seconds =  28.31 MB/sec
+```
+
+
+
+### Problema com teclado abnt2
+
+`xmodmap Xmodmap.abnt2`
+
+(O arquivo "Xmodmap.abnt2" esta pra download em "Downloads")
+
+
+
+
+### OpenGL
+
+
+```sh
+#!/bin/sh
+clear
+echo "--------------------------------------------"
+echo "Compilando Programa em OPENGL"
+echo "Script Escrito por ROBERTO"
+echo "DIBETAO@GMAIL.COM"
+echo "--------------------------------------------"
+echo " "
+
+if [ "$2" == '' ]; then
+echo "ERRO: Especifique um nome para o programa."
+echo "Ex.: opengl-meu fonte.c nome_prog"
+else
+gcc -I/usr/X11R6/include $1 -L../lib -lglut -lGLU -lGL -lm -o $2
+fi
+```
+
+
+
+
+### IMAGE MAGICK
+
+```
+$ convert -geometry 800x600 foto_original.jpg foto_redimensionada.jpg
+Redimensiona para 800x600 sem alterar a imagem original.
+
+$ convert -resize 500 foto_original.jpg foto_redimensionada.jpg
+Redimensiona proporcionalmente para 500x??? pixels.
+
+$ mogrify -geometry 600x400 foto.jpg
+O mogrify eh como o convert, mas sobrescreve o arquivo original.
+
+$ mogrify -resize 800 *.jpg
+Redimensiona para 800x??? todas as fotos do diretorio.
+
+$ display *.jpg
+Mostra todas as imagens *.jpg da pasta.
+```
+
+</xmp>
+
+<script src="../strapdown/v/0.2/strapdown.js"></script>
+</html>
