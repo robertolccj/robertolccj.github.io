@@ -1,0 +1,134 @@
+<html lang="pt-br">
+<head>
+<title>Projetos de Física com Arduino</title>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+<style> <!-- https://github.com/arturadib/strapdown/issues/25 -->
+  td[align=right] { text-align: right !important; }
+  td[align=center] { text-align: center !important; }
+  td[align=left] { text-align: left !important; }
+</style>
+
+</head>
+<body>
+<xmp theme="bootstrap" style="display:none;">
+<!-- INICIO DO MARKDOWN -->
+
+
+## Motivação
+
+1. Como alguns experimentos utilizam de medidas em cronômetro efetuada pelos alunos, a sincronia entre o evento (experimental) e o acionamento do cronômetro podem ocasionar medidas que resultam em dados não condizentes com a teoria.
+
+
+2. Em virtude da reforma nos laboratórios e redução do espaço, alguns experimentos ficam inviáveis de ser realizados pois exigem um espaço maior. Uma solução seria reduzir em escala o “tamanho dos experimentos”. No entanto, isto implicaria na perca de precisão das medidas relacionadas ao tempo de medida. Assim, haveria a necessidade de melhorar a precisão utilizando-se instrumentos de medida mais precisos.
+
+
+---
+
+
+## Queda Livre
+
+*Física 1*
+
+![imagem](figs/queda-livre.jpg)
+
+O objetivo é medir o tempo de queda livre usando sensores acoplados no Arduino.
+Assim poderemos medir com precisão o valor da aceleração da gravidade "g".
+
+
+---
+
+## Lançamento horizontal
+
+*Física 1*
+
+![imagem](figs/lancador-aparato1.jpg)
+
+
+O objetivo do experimento é analisar o movimento bidimensional de um prójétil.
+Para isso, devemos obter com precisão o tempo entre os eventos *saída da calha* e a *chegada ao solo*.
+
+Um sensor é usado para disparar um cronômetro no instante que o projétil deixa a calha, e o outro sensor detecta a chegada do projétil no alvo e para o cronômetro.
+
+Necessário uma medida de tempo precisa pois o experimento é realizado sobre a bancada, o que resulta em um tempo muito pequeno.
+
+Consistindo de um lançador de esfera pelo efeito da gravidade, teríamos que medir o tempo entre a saída de um projétil do lançador até a chegada do projétil no solo.
+Solução:  O experimento poderia ser feito sobre a própria mesa, utilizando um sensor (infravermelho) que dispara o cronômetro no momento inicial de saída da plataforma (lançador) e a chegada da esfera em uma caixa de areia (ou outro material) conectada à um sensor de choque (ex. Ultrassom).
+
+
+---
+
+## Rolamento em um plano inclinado
+
+*Física 2*
+
+![imagem](figs/plano-inclinado.jpg)
+
+Neste experimento é estudado o momento de inércia de corpos com diferentes geometrias.
+Necessário acoplar sensores de passagem a fim de contar o tempo do percurso dos objetos.
+O tempo deve ser medido com precisão.
+
+Consistindo de um plano inclinado de madeira bastante grande (cerca de 2m de comprimento), objetos de diferentes formas geométricas (cilindro, esfera, anel) são postos rolar plano abaixo e são medidos o espaço percorrido e o tempo de translado. Com a redução do plano inclinado para que o experimento seja realizado sobre a mesa, o tempo de medida fica reduzido e aprecisão no cronômetro fica bastante compromentida.
+Solução: Sensores do instante de lançamento (infravermelho) e instante de chegada (choque, ultrassom).
+
+
+---
+
+## Gerador de ondas em água
+
+*Física 2*
+
+![imagem](figs/ondas-agua.jpg)
+
+Este experimento é importante pois atualmente não há prática sobre ondas no laboratório.
+Através deste experimentos podemos analisar parâmetros como comprimento de onda aplitude, velociadade de propagação da onda, frequência e período de oscilação.
+
+
+---
+
+## Refração
+
+*Ciências dos Materiais / Óptica*
+
+![imagem](figs/refracao-laser.jpg)
+
+Analisar a refração de um feixe de luz laser em um semidisco de material transparente.
+
+
+---
+
+## Temperaturas
+
+*Física Ambiental / Física 2*
+
+![imagem](figs/temperatura-placas.jpg)
+
+Neste experimento deve-se monitorar a temperatira de algumas placas metálicas de cores diferentes.
+Assim podemos analisar o efeito da cor em relação ao aquecimento. Discutimos o processo de transporte de calor por radiação térmica.
+É usada uma lâmpada de aquecimento que deve simular o sol.
+
+
+---
+
+## Oscilações - Pêndulo
+
+*Física 2 / Física Ambiental*
+
+Apenas sensores infravermelho (múltiplos tempos) para medir o tempo de uma (1) oscilação para diferentes comprimentos de pêndulo e massas.
+
+
+---
+
+## Oscilações – Mola
+
+*Física 2 / Física Ambiental*
+
+Medir frequência de oscilação para diferentes massas e constante elástica de molas.
+Sensor infravermelho de múltiplos tempos.
+
+
+
+<!-- FINAL DO MARKDOWN -->
+</xmp>
+<script src="../../strapdown/v/0.2/strapdown.js"></script>
+</html>
