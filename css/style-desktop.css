@@ -38,7 +38,7 @@
 
 	header
 	{
-		margin: 0 0 3em 0;
+		margin: 0 0 2em 0;
 	}
 	
 		header > span
@@ -48,7 +48,7 @@
 
 	footer
 	{
-		margin: 3em 0 0 0;
+		margin: 2em 0 0 0;
 	}
 	
 		footer > p
@@ -107,13 +107,14 @@
 
 	.wrapper
 	{
-		padding: 8em 0 8em 0;
+		padding: 4em 0 4em 0;
 		text-align: center;
 	}
 	
 		.wrapper-first
 		{
-			padding-top: 12em;
+			padding-top: 8em;
+			padding-bottom: 8em
 		}
 
 /*********************************************************************************/
