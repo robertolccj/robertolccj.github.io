@@ -1,8 +1,3 @@
-<!-- Place inside the <head> of your HTML -->
-
-<!-- Place this in the body of the page content -->
-
-
 <!DOCTYPE HTML>
 
 <!--
@@ -13,15 +8,24 @@ Free for personal and commercial use under the CCA 3.0 license (html5up.net/lice
 
 <html>
 <head>
+
 	<title>Roberto's Home Page</title>
+
+
 	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
 	<meta name="description" content="Local onde compartilho assuntos como Física, Linux, etc." />
 	<meta name="keywords" content="física, linux, ensino" />
 	<meta name="author" content="Roberto Lima">
+
+
 	<link href="http://fonts.googleapis.com/css?family=Open+Sans:300,600,700" rel="stylesheet" />
+
+
 	<script src="js/jquery.min.js"></script>
 	<script src="js/config.js"></script>
 	<script src="js/skel.min.js"></script>
+
+
 	<noscript>
 		<link rel="stylesheet" href="css/skel-noscript.css" />
 		<link rel="stylesheet" href="css/style.css" />
@@ -29,32 +33,35 @@ Free for personal and commercial use under the CCA 3.0 license (html5up.net/lice
 		<link rel="stylesheet" href="css/font-awesome.min.css" />
 
 	</noscript>
+
+
 	<!--[if lte IE 9]><link rel="stylesheet" href="css/ie9.css" /><![endif]-->
 	<!--[if lte IE 8]><script src="js/html5shiv.js"></script><link rel="stylesheet" href="css/ie8.css" /><![endif]-->
 	<!--[if lte IE 7]><link rel="stylesheet" href="css/ie7.css" /><![endif]-->
-	<script type="text/javascript">
-		var _gaq = _gaq || [];
-		_gaq.push(['_setAccount', 'UA-40104693-1']);
-	 	_gaq.push(['_trackPageview']);
 
-		(function() {
-		var ga = document.createElement('script'); ga.type = 'text/javascript';
-		ga.async = true;
-		ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-		var s = document.getElementsByTagName('script')[0];
-		s.parentNode.insertBefore(ga, s);
-		})();
+
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-108869933-1"></script>
+	<script>
+	  window.dataLayer = window.dataLayer || [];
+	  function gtag(){dataLayer.push(arguments);}
+	  gtag('js', new Date());
+
+	  gtag('config', 'UA-108869933-1');
 	</script>
 
-
-<script type="text/javascript" src="ckeditor/ckeditor.js"></script>
 
 </head>
 <body>
 
 
 
+
+
+
+
 <!-- Nav -->
+
 <nav id="nav" contenteditable="false">
 	<ul class="container">
 		<li><a href="#top">Topo</a></li>
@@ -67,7 +74,12 @@ Free for personal and commercial use under the CCA 3.0 license (html5up.net/lice
 
 
 
+
+
+
+
 <!-- Home -->
+
 <div class="wrapper wrapper-style1 wrapper-first">
 
 <article class="container" id="top">
@@ -92,6 +104,7 @@ Free for personal and commercial use under the CCA 3.0 license (html5up.net/lice
 
 
 <!-- Work -->
+
 <div class="wrapper wrapper-style2">
 	<article class="container" id="work">
 		<header>
@@ -137,11 +150,6 @@ Free for personal and commercial use under the CCA 3.0 license (html5up.net/lice
 </div>
 
 
-<footer>
-	<p>Qualquer dúvida, informações, e etc, envie seu comentário abaixo.</p>
-	<!-- a href="#portfolio" class="button button-big">See some of my recent work</a -->
-</footer>
-
 
 </article>
 </div>
@@ -153,98 +161,26 @@ Free for personal and commercial use under the CCA 3.0 license (html5up.net/lice
 
 
 
+
+
 <!-- Contact -->
+
 <div class="wrapper wrapper-style4">
-	<article id="contact" class="container small">
-		<header>
-		<h2>Deseja entrar em contato?</h2>
-		<span>Preencha os campos abaixo, e em breve lhe responderei!</span>
-		</header>
-	
-		<div>
-		<div class="row">
-			<div class="12u">
-			<form method="post" action="https://docs.google.com/forms/d/1DbFPBKZtz2zUZ4B0YsL5OAqzyQJEnHGZWb-Y1PGTuNQ/formResponse">
-			<div>
-			<div class="row half">
-			<div class="6u">
-			<input type="text" name="entry.2040880302" id="entry_2040880302" placeholder="Nome" />
-			</div>
-			
-			<div class="6u">
-			<input type="text" name="entry.1059770290" id="entry_1059770290" placeholder="Email" />
-			</div>
-		</div>
-
-
-
-		<div class="row half">
-			<div class="12u">
-			<input type="text" name="entry.166102494" id="entry_166102494" placeholder="Assunto" />
-			</div>
-		</div>
-
-
-
-		<div class="row half">
-			<div class="12u">
-			<textarea name="entry.529771468" id="entry_529771468" placeholder="Mensagem"></textarea>
-			</div>
-		</div>
-
-
-		<div class="row">
-			<div class="12u">
-			<a href="#" class="button button-alt form-button-reset">Limpar Formulário</a>
-			<!-- <div class="g-recaptcha" data-sitekey="6LfhFjYUAAAAALfE4aZT_nMk8emN4mZN5RBnTg6q"></div> -->
-			<a href="#" class="button form-button-submit">Enviar Mensagem</a>
-
-<!--
-<a href="#" class="g-recaptcha" data-sitekey="6LfhFjYUAAAAALfE4aZT_nMk8emN4mZN5RBnTg6q" data-callback="form-button-submit">Enviar Mensagem</a>
--->
-
-
-<!--
-
-<button
-class="g-recaptcha"
-
-data-callback="YourOnSubmitFn">
-Submit
-</button>
--->
-
-		</div>
-
-
-		</div>
-	</div>
-
-
-
-
-
-
-	<div class="g-recaptcha" data-sitekey="6LfhFjYUAAAAALfE4aZT_nMk8emN4mZN5RBnTg6q"></div>
-	</form>
-	</div>
-	</div>
-
-
-
-
-
+<article id="contact" class="container small">
 
 <div class="row">
 <div class="12u">
-<hr />
+
 <h3>Encotre-me no ...</h3>
-
 <ul class="social">
-<li class="googleplus"><a href="https://plus.google.com/u/0/+RobertoLimaJunior" class="fa fa-google-plus"><span>Google+</span></a></li>
 <li class="twitter"><a href="http://twitter.com/robertolccj" class="fa fa-twitter"><span>Twitter</span></a></li>
+<li class="googleplus"><a href="https://plus.google.com/u/0/+RobertoLimaJunior" class="fa fa-google-plus"><span>Google+</span></a></li>
 <li class="github"><a href="http://github.com/robertolccj" class="fa fa-github"><span>Github</span></a></li>
+</ul>
 
+
+</div>
+</div>
 
 
 
@@ -273,11 +209,7 @@ Submit
 
 
 
-</ul>
-<hr />
-</div>
-</div>
-</div>
+
 
 
 <footer>
@@ -298,10 +230,6 @@ Submit
 </article>
 </div>
 
-
-
-
-<script src='https://www.google.com/recaptcha/api.js?hl=pt-BR'></script>
 
 </body>
 </html>
