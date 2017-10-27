@@ -1,0 +1,84 @@
+<?xml version="1.0"?>
+<rss version="2.0">
+<channel>
+<title>Blog - GET Física Experimental</title>
+<link>http://robertolccj.github.io/pesquisa/grupo_estudo/blog/index.html</link>
+<description>Blog do Grupo de Estudos em Física Experimental</description>
+<lastBuildDate>Sun, 12 Feb 2017 12:00:00 -0300</lastBuildDate>
+
+
+<item>
+<title>#08 Montagem Arduino e Código</title>
+<link>
+http://robertolccj.github.io/pesquisa/grupo_estudo/blog/20170424-reuniao-08.html
+</link>
+<description>Montagem inicial utilizando Arduino.</description>
+<pubDate>Mon, 24 Apr 2017 18:00:00 -0300</pubDate>
+</item>
+
+<item>
+<title>#07 Projetos propostos</title>
+<link>
+http://robertolccj.github.io/pesquisa/grupo_estudo/blog/20170417-reuniao-07.html
+</link>
+<description>Proposição de projetos e formação de equipes.</description>
+<pubDate>Mon, 17 Apr 2017 18:00:00 -0300</pubDate>
+</item>
+
+<item>
+<title>#06 Planejamento Arduino</title>
+<link>
+http://robertolccj.github.io/pesquisa/grupo_estudo/blog/20170410-reuniao-06.html
+</link>
+<description>Utilização do Arduino nos projetos de Física.</description>
+<pubDate>Mon, 10 Apr 2017 18:00:00 -0300</pubDate>
+</item>
+
+<item>
+<title>#05 Cobrança de Relatórios</title>
+<link>
+http://robertolccj.github.io/pesquisa/grupo_estudo/blog/20170320-reuniao-05.html
+</link>
+<description>Cobrança dos relatórios pendentes.</description>
+<pubDate>Mon, 20 Mar 2017 18:00:00 -0300</pubDate>
+</item>
+
+<item>
+<title>#04 Conversa sobre LaTeX</title>
+<link>
+http://robertolccj.github.io/pesquisa/grupo_estudo/blog/20170313-reuniao-04.html
+</link>
+<description>Conversa sobre LaTeX e elaboração dos relatórios.</description>
+<pubDate>Mon, 13 Mar 2017 18:00:00 -0300</pubDate>
+</item>
+
+<item>
+<title>#03 Experimento de Fluidos</title>
+<link>
+http://robertolccj.github.io/pesquisa/grupo_estudo/blog/20170306-reuniao-03.html
+</link>
+<description>Execução do experimento sobre Fluidos.</description>
+<pubDate>Mon, 06 Mar 2017 18:00:00 -0300</pubDate>
+</item>
+
+<item>
+<title>#02 Experimento de Rotações</title>
+<link>
+http://robertolccj.github.io/pesquisa/grupo_estudo/blog/20170220-reuniao-02.html
+</link>
+<description>Execução do experimento sobre rotações.</description>
+<pubDate>Mon, 20 Fev 2017 18:00:00 -0300</pubDate>
+</item>
+
+<item>
+<title>#01 GET: Nova Fase</title>
+<link>
+http://robertolccj.github.io/pesquisa/grupo_estudo/blog/20170216-reuniao-01.html
+</link>
+<description>Reavaliar o GET: passado e futuro.</description>
+<pubDate>Thu, 16 Feb 2017 18:00:00 -0300</pubDate>
+</item>
+
+
+</channel>
+</rss>
