@@ -1,5 +1,5 @@
 # Configurações de construção do site
-theme: jekyll-theme-minimal
+theme: jekyll-theme-cayman
 
 # Jekyll : Configurações gerais
 title: [Repositório IFCE]
