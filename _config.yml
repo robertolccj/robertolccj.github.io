@@ -1,1 +1,8 @@
+# Configurações de construção do site
 theme: jekyll-theme-minimal
+
+# Jekyll : Configurações gerais
+title: [Repositório IFCE]
+description: [Repositório pessoal para os trabalhos desenvolvidos no IFCE.]
+url: https://robertolccj.github.io
+src: https://github.com/robertolccj/ensino/IFCE
