@@ -1,8 +1,4 @@
----
-layout: default
----
-
-# [](#header-1) Cursos
+# Cursos
 
 
 - [Licenciatura em Física]()
