@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<rss version="2.0">
+<channel>
+<title>Física Experimental 1 - Cedro 2018</title>
+<link>http://robertolccj.github.io/ensino/IFCE/FEXP1/blog/index.html</link>
+<description>Blog da disciplina de Física Experimental</description>
+<lastBuildDate>Fri, 8 jun 2018 12:00:00 -0300</lastBuildDate>
+
+
+
+<item>
+<title>Plano Inicial</title>
+<link>
+http://robertolccj.github.io/ensino/IFCE/FEXP1/blog/20180607-plano-inicial.html
+</link>
+<description>Planejamento inicial da disciplina</description>
+<pubDate>Thu, 07 Jun 2018 12:00:00 -0300</pubDate>
+</item>
+
+
+</channel>
+</rss>
