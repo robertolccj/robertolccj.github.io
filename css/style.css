@@ -25,7 +25,7 @@
 	{
 		font-family: 'Open Sans', sans-serif;
 		line-height: 1.85em;
-		color: #888;
+		color: #888x;
 		font-weight: 300;
 	}
 
@@ -335,7 +335,7 @@
 			top: 0;
 			border-radius: 6px;
 			overflow: hidden;
-			background: #444;
+			background: #AAA; /* Original foi #444 */
 			background-image: -moz-linear-gradient(top, rgba(0,0,0,0), rgba(0,0,0,0.2));
 			background-image: -webkit-linear-gradient(top, rgba(0,0,0,0), rgba(0,0,0,0.2));
 			background-image: -o-linear-gradient(top, rgba(0,0,0,0), rgba(0,0,0,0.2));
@@ -377,6 +377,8 @@
 			ul.social li.blogger:hover				{ background-color: #FF6501; }
 			ul.social li.flickr:hover				{ background-color: #0062DB; }
 			ul.social li.vimeo:hover				{ background-color: #4C8AB0; }
+			ul.social li.telegram:hover				{ background-color: #0088cc; }
+
 
 			ul.social li:hover
 			{
@@ -898,6 +900,13 @@
 		color: #999;
 		text-shadow: -1px -1px 0px #181818;
 	}
+	.wrapper-style5
+	{
+		background-color: #777777;
+		color: #999;
+		text-shadow: -1px -1px 0px #fff;
+	}
+
 
 		.wrapper-style4 h1, 
 		.wrapper-style4 h2, 
