@@ -1,27 +1,33 @@
-<?xml version="1.0"?>
-<rss version="2.0">
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    
 <channel>
 <title>Blog do Roberto</title>
-<link>https://robertolccj.github.io/blog/</link>
 <description>Sou Físico e Professor, e este é o espaço onde compartilho algumas coisas.</description>
-<lastBuildDate>Fri, 22 May 2020 07:00:00 -0300</lastBuildDate>
+<link>https://robertolccj.github.io/blog/</link>
+<atom:link href="https://robertolccj.github.io/blog/rss.xml" rel="self" type="application/rss+xml" />
+<language>pt-br</language>
+<lastBuildDate>Sat, 23 May 2020 07:00:00 -0300</lastBuildDate>
 
 <item>
 <title>Será um retorno ao blog?</title>
+<guid>https://robertolccj.github.io/blog/2020/0522_blog_retorno.html</guid>
 <link>https://robertolccj.github.io/blog/2020/0522_blog_retorno.html</link>
 <description>(sem descrição)</description>
-<pubDate>Sat, 23 May 2020 04:00:00 -0300</pubDate>
+<pubDate>Sat, 23 May 2020 07:00:00 -0300</pubDate>
 </item>
 
 <item>
 <title>Efeito Fotoelétrico</title>
+<guid>https://robertolccj.github.io/blog/2015/20150815_efeito_fotoeletrico.html</guid>
 <link>https://robertolccj.github.io/blog/2015/20150815_efeito_fotoeletrico.html</link>
 <description>(sem descrição)</description>
-<pubDate>Sun, 15 Aug 2015 12:00:00 -0300</pubDate>
+<pubDate>Sat, 15 Aug 2015 12:00:00 -0300</pubDate>
 </item>
 
 <item>
 <title>Segurança Web</title>
+<guid>https://robertolccj.github.io/blog/2015/20150721_seguranca_web.html</guid>
 <link>https://robertolccj.github.io/blog/2015/20150721_seguranca_web.html</link>
 <description>(sem descrição)</description>
 <pubDate>Sun, 2 Aug 2015 13:15:00 -0300</pubDate>
