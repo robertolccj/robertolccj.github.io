@@ -1,0 +1,1 @@
+Fiz uma edição no arquivo strapdown.min.js para que o mesmo não apresente um menu dropdown para o usuário mudar o tema.
