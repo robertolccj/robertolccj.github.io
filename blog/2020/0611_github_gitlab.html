@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<title>Blog do Roberto</title>
+<meta charset="utf-8">
+<link rel="alternate" type="application/rss+xml" href="../rss.xml">
+<xmp theme="united" style="display:none;">
+
+
+# Espelhando arquivos GitHub no GitLab
+
+
+No processo de "espelhamento" utilizei como referências:
+
+https://steveperkins.com/migrating-projects-from-github-to-gitlab/
+
+https://about.gitlab.com/stages-devops-lifecycle/pages/
+
+
+Criei inicialmente o projeto no GitLab, com o nome `robertolccj.gitlab.io`.
+
+Depois, estando localmente dentro do diretório do projeto, dei o comando no terminal:
+
+```bash
+git remote add gitlab https://www.gitlab.com/robertolccj/robertolccj.gitlab.io
+git push gitlab
+```
+
+Apareceu no terminal para eu colocar meu nome de usuário e senha.
+Logo depois houve o upload dos arquivos, inclusive de todos os commits do histórico.
+
+
+O principal problema que encontrei foi com o arquivo `.gitlab-ci.yml`.
+A recomendação era usar um diretório `public`.
+No entanto, como meu aquivo `index.html` estava no diretório raiz, haveria necessidade do `script` no `gitlab-ci.yml`.
+Como pode ser visto no código abaixo, é como se houvesse uma simulação de criação do diretório `public`, requerido pelo GitLab.
+
+
+```bash
+image: alpine:latest
+
+pages:
+  stage: deploy
+  script:
+  - mkdir .public
+  - cp -r * .public
+  - mv .public public
+  artifacts:
+    paths:
+    - public
+  only:
+  - master
+```
+
+Tive que rodar o pipeline no GitLab.
+No final das contas, foi possível "sincronizar" os dois site.
+Agora meu site está espelhado em dois locais: GitHub e GitLab.
+
+
+---
+
+Roberto Lima  
+Fortaleza, 11 de Junho de 2020
+
+
+
+</xmp>
+<script src="../../strapdown/strapdown.min.js"></script>
+</html>
