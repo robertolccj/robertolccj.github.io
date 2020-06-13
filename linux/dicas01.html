@@ -43,7 +43,10 @@ set ts=4 "Seta onde o tab para
 set sw=4 "largura do tab
 set et "espacos em vez de tab
 colorscheme blue "cor de fundo azul - MUITO BOM
-<tt>au BufReadPost * if line("'\"")>0 && line("'\"")<=line("$") | exe "normal g'\"" | endif </tt>
+au BufReadPost * if line("'\"")>0 && line("'\"")<=line("$") | exe "normal g'\"" | endif
+
+"Change html file default syntax to markdown
+au BufRead,BufNewFile *.html setfiletype markdown
 ```
 
 ### Central Multimídia
