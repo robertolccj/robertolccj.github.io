@@ -4,15 +4,15 @@
 <channel>
 <title>Introdução à Física</title>
 <description>Feed de atualizações da página do professor Roberto Lima.</description>
-<link>https://robertolccj.github.io/ensino/IFCE/2020-1/IFIS/index.html</link>
-<atom:link href="https://robertolccj.github.io/ensino/IFCE/2020-1/IFIS/rss.xml" rel="self" type="application/rss+xml" />
+<link>https://robertolccj.gitlab.io/ensino/IFCE/2020-1/IFIS/index.html</link>
+<atom:link href="https://robertolccj.gitlab.io/ensino/IFCE/2020-1/IFIS/rss.xml" rel="self" type="application/rss+xml" />
 <language>pt-br</language>
 <lastBuildDate>Wed, 01 Jul 2020 07:00:00 -0300</lastBuildDate>
 
 <item>
 <title>Início das atividades</title>
-<guid>https://robertolccj.github.io/ensino/IFCE/2020-1/IFIS/index.html</guid>
-<link>https://robertolccj.github.io/ensino/IFCE/2020-1/IFIS/index.html</link>
+<guid>https://robertolccj.gitlab.io/ensino/IFCE/2020-1/IFIS/index.html</guid>
+<link>https://robertolccj.gitlab.io/ensino/IFCE/2020-1/IFIS/index.html</link>
 <description>Início das atividades do site de apoio da disciplina de Introdução à Física.</description>
 <pubDate>Wed, 01 Jul 2020 07:00:00 -0300</pubDate>
 </item>
