@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    
+<channel>
+<title>MB1</title>
+<description>Mecanica Básica 1. Professor: Roberto Lima.</description>
+<link>https://robertolccj.gitlab.io/ensino/IFCE/2020-1/MB1/index.html</link>
+<atom:link href="https://robertolccj.gitlab.io/ensino/IFCE/2020-1/MB1/rss.xml" rel="self" type="application/rss+xml" />
+<language>pt-br</language>
+<lastBuildDate>Wed, 01 Jul 2020 10:00:00 -0300</lastBuildDate>
+
+<item>
+<title>Início das atividades</title>
+<guid>https://robertolccj.gitlab.io/ensino/IFCE/2020-1/MB1/index.html</guid>
+<link>https://robertolccj.gitlab.io/ensino/IFCE/2020-1/MB1/index.html</link>
+<description>Início do repositório da disciplina Mecanica Basica 1, 2020.1.</description>
+<pubDate>Wed, 01 Jul 2020 10:00:00 -0300</pubDate>
+</item>
+
+</channel>
+</rss>
