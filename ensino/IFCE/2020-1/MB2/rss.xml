@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    
+<channel>
+<title>MB2</title>
+<description>Mecanica Básica 2. Professor: Roberto Lima.</description>
+<link>https://robertolccj.gitlab.io/ensino/IFCE/2020-1/MB2/index.html</link>
+<atom:link href="https://robertolccj.gitlab.io/ensino/IFCE/2020-1/MB2/rss.xml" rel="self" type="application/rss+xml" />
+<language>pt-br</language>
+<lastBuildDate>Wed, 01 Jul 2020 07:00:00 -0300</lastBuildDate>
+
+<item>
+<title>Início das atividades</title>
+<guid>https://robertolccj.gitlab.io/ensino/IFCE/2020-1/MB2/index.html</guid>
+<link>https://robertolccj.gitlab.io/ensino/IFCE/2020-1/MB2/index.html</link>
+<description>Início das atividades do site de apoio da disciplina de Mecanica Básica 2.</description>
+<pubDate>Wed, 01 Jul 2020 07:00:00 -0300</pubDate>
+</item>
+
+</channel>
+</rss>
