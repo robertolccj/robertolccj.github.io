@@ -1,21 +1,78 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-    
+
 <channel>
-<title>MB1</title>
-<description>Mecanica Básica 1. Professor: Roberto Lima.</description>
-<link>https://robertolccj.gitlab.io/ensino/IFCE/2020-1/MB1/index.html</link>
+
+<!-- INFORMAÇÕES DO CANAL  -->
+
+<title>
+    Mecânica Básica 1
+</title>
+<description>
+    Repositório pessoal do professor Roberto.
+    Disciplina: Mecanica Básica 1.
+</description>
+<link>
+    https://robertolccj.gitlab.io/ensino/IFCE/2020-1/MB1/index.html
+</link>
 <atom:link href="https://robertolccj.gitlab.io/ensino/IFCE/2020-1/MB1/feed/rss.xml" rel="self" type="application/rss+xml" />
-<language>pt-br</language>
-<lastBuildDate>Wed, 01 Jul 2020 10:00:00 -0300</lastBuildDate>
+<language>
+    pt-br
+</language>
+<lastBuildDate>
+    Wed, 01 Jul 2020 10:00:00 -0300
+</lastBuildDate>
+
+
+
+<!-- INÍCIO DOS ITENS DO CANAL -->
+
+
 
 <item>
-<title>Início das atividades</title>
-<guid>https://robertolccj.gitlab.io/ensino/IFCE/2020-1/MB1/index.html</guid>
-<link>https://robertolccj.gitlab.io/ensino/IFCE/2020-1/MB1/index.html</link>
-<description>Início do repositório da disciplina Mecanica Basica 1, 2020.1.</description>
-<pubDate>Wed, 01 Jul 2020 10:00:00 -0300</pubDate>
+    <title>
+        Criada a página Informações Gerais.
+    </title>
+    <guid>
+        https://robertolccj.gitlab.io/ensino/IFCE/2020-1/MB1/index.html
+    </guid>
+    <link>
+        https://robertolccj.gitlab.io/ensino/IFCE/2020-1/MB1/index.html
+    </link>
+    <description>
+        Em Informações Gerais há informações importantes sobre o andamento da disciplina.
+    </description>
+    <pubDate>
+        Sat, 04 Jul 2020 10:00:00 -0300
+    </pubDate>
 </item>
+
+
+
+<item>
+    <title>
+        Início das atividades no repositório.
+    </title>
+    <guid>
+        https://robertolccj.gitlab.io/ensino/IFCE/2020-1/MB1/index.html
+    </guid>
+    <link>
+        https://robertolccj.gitlab.io/ensino/IFCE/2020-1/MB1/index.html
+    </link>
+    <description>
+        Início do repositório da disciplina Mecanica Basica 1.
+        Semestre 2020.1.
+    </description>
+    <pubDate>
+        Wed, 01 Jul 2020 10:00:00 -0300
+    </pubDate>
+</item>
+
+
+
+<!-- FIM DOS ITENS DO CANAL  -->
+
+
 
 </channel>
 </rss>

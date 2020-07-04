@@ -1,21 +1,78 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-    
+
 <channel>
-<title>FAPL</title>
-<description>Física Aplicada. Professor: Roberto Lima.</description>
-<link>https://robertolccj.gitlab.io/ensino/IFCE/2020-1/FAPL/index.html</link>
+
+<!-- DESCRIÇÃO DO CANAL -->
+
+<title>
+    Física Aplicada
+</title>
+<description>
+    Repositório pessoal do professor Roberto.
+    Disciplina: Física Aplicada.
+</description>
+<link>
+    https://robertolccj.gitlab.io/ensino/IFCE/2020-1/FAPL/index.html
+</link>
 <atom:link href="https://robertolccj.gitlab.io/ensino/IFCE/2020-1/FAPL/feed/rss.xml" rel="self" type="application/rss+xml" />
-<language>pt-br</language>
-<lastBuildDate>Wed, 01 Jul 2020 09:00:00 -0300</lastBuildDate>
+<language>
+    pt-br
+</language>
+<lastBuildDate>
+    Wed, 01 Jul 2020 09:00:00 -0300
+</lastBuildDate>
+
+
+
+<!-- INICIO DOS ITENS DO CANAL -->
+
+
 
 <item>
-<title>Início das atividades</title>
-<guid>https://robertolccj.gitlab.io/ensino/IFCE/2020-1/FAPL/index.html</guid>
-<link>https://robertolccj.gitlab.io/ensino/IFCE/2020-1/FAPL/index.html</link>
-<description>Início do repositório da disciplina Física Aplicada, 2020.1.</description>
-<pubDate>Wed, 01 Jul 2020 09:00:00 -0300</pubDate>
+    <title>
+        Criada a página Informações Gerais.
+    </title>
+    <guid>
+        https://robertolccj.gitlab.io/ensino/IFCE/2020-1/FAPL/index.html
+    </guid>
+    <link>
+        https://robertolccj.gitlab.io/ensino/IFCE/2020-1/FAPL/index.html
+    </link>
+    <description>
+        Em Informações Gerais há informações importantes para o andamento da disciplina.
+    </description>
+    <pubDate>
+        Sat, 04 Jul 2020 10:00:00 -0300
+    </pubDate>
 </item>
+
+
+
+<item>
+    <title>
+        Início das atividades no repositório.
+    </title>
+    <guid>
+        https://robertolccj.gitlab.io/ensino/IFCE/2020-1/FAPL/index.html
+    </guid>
+    <link>
+        https://robertolccj.gitlab.io/ensino/IFCE/2020-1/FAPL/index.html
+    </link>
+    <description>
+        Início do repositório da disciplina Física Aplicada.
+        Semestre 2020.1.
+    </description>
+    <pubDate>
+        Wed, 01 Jul 2020 09:00:00 -0300
+    </pubDate>
+</item>
+
+
+
+<!-- FINAL DOS ITENS DO CANAL -->
+
+
 
 </channel>
 </rss>
