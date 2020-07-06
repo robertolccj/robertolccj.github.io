@@ -10,7 +10,7 @@
     Disciplina: Mecanica Básica 2.
 </description>
 <link>
-    https://robertolccj.gitlab.io/ensino/IFCE/2020-1/MB2/index.html
+    https://robertolccj.gitlab.io/ensino/IFCE/2020-1/MB2/feed/index.html
 </link>
 <atom:link href="https://robertolccj.gitlab.io/ensino/IFCE/2020-1/MB2/feed/rss.xml" rel="self" type="application/rss+xml" />
 <language>
@@ -31,10 +31,10 @@
         Criada a página Informações Gerais.
     </title>
     <guid>
-        https://robertolccj.gitlab.io/ensino/IFCE/2020-1/MB2/index.html
+        https://robertolccj.gitlab.io/ensino/IFCE/2020-1/MB2/feed/index.html#h2_pagina-de-informacoes
     </guid>
     <link>
-        https://robertolccj.gitlab.io/ensino/IFCE/2020-1/MB2/index.html
+        https://robertolccj.gitlab.io/ensino/IFCE/2020-1/MB2/feed/index.html#h2_pagina-de-informacoes
     </link>
     <description>
         Em Informações Gerais há informações importantes para o andamento da disciplina.
@@ -51,10 +51,10 @@
         Início das atividades no repositório.
     </title>
     <guid>
-        https://robertolccj.gitlab.io/ensino/IFCE/2020-1/MB2/index.html
+        https://robertolccj.gitlab.io/ensino/IFCE/2020-1/MB2/feed/index.html#h1_inicando-repositorio
     </guid>
     <link>
-        https://robertolccj.gitlab.io/ensino/IFCE/2020-1/MB2/index.html
+        https://robertolccj.gitlab.io/ensino/IFCE/2020-1/MB2/feed/index.html#h1_inicando-repositorio
     </link>
     <description>
         Início do repositório da disciplina Mecanica Basica 2.
