@@ -49,6 +49,46 @@ au BufReadPost * if line("'\"")>0 && line("'\"")<=line("$") | exe "normal g'\"" 
 au BufRead,BufNewFile *.html setfiletype markdown
 ```
 
+
+
+
+```ssh
+"Uma outra configuração do VIM by 2020
+
+syntax on "syntax highlight
+set showmatch "mostra caracteres ( { [ quando fechados
+set mouse=a "habilita todas as acoes do mouse
+set number "numeração de linhas
+
+set columns=80
+set linebreak
+autocmd VimResized * if (&columns > 80) | set columns=80 | endif
+set colorcolumn=80
+"set showbreak=>>> 
+"set numberwidth=6
+
+"set textwidth=80
+"set wrapmargin=5
+"set wrap linebreak "soft wrap
+"set wrap
+"set nowrap "sem wrap (quebra de linha)
+
+set tabstop=4 "tabs are at proper location
+set expandtab "don't use actual tab character (ctrl-v)
+set shiftwidth=4 "indenting is 4 spaces
+
+set autoindent "turns it on
+set smartindent "does the right thing (mostly) in programs
+set cindent "stricter rules for C programs
+
+colorscheme default "darkblue blue
+
+"Change html file default syntax to markdown
+au BufReadPost *.html set syntax=markdown
+
+set spell spelllang=pt_br,en_us
+```
+
 ### Central Multimídia
 
 [OpenElec](http://openelec.tv/) para o Raspberry Pi
