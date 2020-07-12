@@ -28,16 +28,37 @@
 
 <item>
     <title>
-        Criada a página Informações Gerais.
+        Q4-T3
     </title>
     <guid>
-        https://robertolccj.gitlab.io/ensino/IFCE/2020-1/MB2/feed/index.html#h2_pagina-de-informacoes
+        https://robertolccj.gitlab.io/ensino/IFCE/2020-1/MB2/feed/index.html#h3_q4-t3
     </guid>
     <link>
-        https://robertolccj.gitlab.io/ensino/IFCE/2020-1/MB2/feed/index.html#h2_pagina-de-informacoes
+        https://robertolccj.gitlab.io/ensino/IFCE/2020-1/MB2/feed/index.html#h3_q4-t3
     </link>
     <description>
-        Em Informações Gerais há informações importantes para o andamento da disciplina.
+        Mecânica Básica 2 (MB2).
+        Adicionado questionário 4.3: Movimento Plano de um Corpo Rígido, da Unidade 4: Dinâmica de Corpos Rígidos.
+    </description>
+    <pubDate>
+        Sun, 12 Jul 2020 07:30:00 -0300
+    </pubDate>
+</item>
+
+
+
+<item>
+    <title>
+        Informacoes
+    </title>
+    <guid>
+        https://robertolccj.gitlab.io/ensino/IFCE/2020-1/MB2/feed/index.html#h2_informacoes
+    </guid>
+    <link>
+        https://robertolccj.gitlab.io/ensino/IFCE/2020-1/MB2/feed/index.html#h2_informacoes
+    </link>
+    <description>
+        Criada página Informações Gerais, com informações importantes para o andamento da disciplina.
     </description>
     <pubDate>
         Sat, 04 Jul 2020 10:00:00 -0300
@@ -48,13 +69,13 @@
 
 <item>
     <title>
-        Início das atividades no repositório.
+        Repositorio
     </title>
     <guid>
-        https://robertolccj.gitlab.io/ensino/IFCE/2020-1/MB2/feed/index.html#h1_inicando-repositorio
+        https://robertolccj.gitlab.io/ensino/IFCE/2020-1/MB2/feed/index.html#h1_repositorio
     </guid>
     <link>
-        https://robertolccj.gitlab.io/ensino/IFCE/2020-1/MB2/feed/index.html#h1_inicando-repositorio
+        https://robertolccj.gitlab.io/ensino/IFCE/2020-1/MB2/feed/index.html#h1_repositorio
     </link>
     <description>
         Início do repositório da disciplina Mecanica Basica 2.
