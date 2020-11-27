@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+
+<channel>
+<title>
+    Metodologia do Ensino de Física.
+</title>
+<description>
+    Disciplina: Metodologia do Ensino de Física.
+</description>
+<link>
+    https://robertolccj.gitlab.io/ensino/IFCE/2020-2/MEF/feed/index.html
+</link>
+<atom:link href="https://robertolccj.gitlab.io/ensino/IFCE/2020-2/MEF/feed/rss.xml" rel="self" type="application/rss+xml" />
+<language>
+    pt-br
+</language>
+<lastBuildDate>
+    Wed, 01 Jul 2020 07:00:00 -0300
+</lastBuildDate>
+
+
+
+<!-- INÍCIO DOS ITENS DO CANAL -->
+
+
+
+<item>
+    <title>
+        Q4-T3
+    </title>
+    <guid>
+        https://robertolccj.gitlab.io/ensino/IFCE/2020-1/MB2/feed/index.html#h3_q4-t3
+    </guid>
+    <link>
+        https://robertolccj.gitlab.io/ensino/IFCE/2020-1/MB2/feed/index.html#h3_q4-t3
+    </link>
+    <description>
+        Mecânica Básica 2 (MB2).
+        Adicionado questionário 4.3: Movimento Plano de um Corpo Rígido, da Unidade 4: Dinâmica de Corpos Rígidos.
+    </description>
+    <pubDate>
+        Sun, 12 Jul 2020 07:30:00 -0300
+    </pubDate>
+</item>
+
+
+
+<item>
+    <title>
+        Informacoes
+    </title>
+    <guid>
+        https://robertolccj.gitlab.io/ensino/IFCE/2020-1/MB2/feed/index.html#h2_informacoes
+    </guid>
+    <link>
+        https://robertolccj.gitlab.io/ensino/IFCE/2020-1/MB2/feed/index.html#h2_informacoes
+    </link>
+    <description>
+        Criada página Informações Gerais, com informações importantes para o andamento da disciplina.
+    </description>
+    <pubDate>
+        Sat, 04 Jul 2020 10:00:00 -0300
+    </pubDate>
+</item>
+
+
+
+<item>
+    <title>
+        Repositorio
+    </title>
+    <guid>
+        https://robertolccj.gitlab.io/ensino/IFCE/2020-1/MB2/feed/index.html#h1_repositorio
+    </guid>
+    <link>
+        https://robertolccj.gitlab.io/ensino/IFCE/2020-1/MB2/feed/index.html#h1_repositorio
+    </link>
+    <description>
+        Início do repositório da disciplina para o semestre 2020.2.
+    </description>
+    <pubDate>
+        Wed, 01 Jul 2020 07:00:00 -0300
+    </pubDate>
+</item>
+
+
+
+<!-- FINAL DOS ITENS DO CANAL -->
+
+
+
+</channel>
+</rss>
