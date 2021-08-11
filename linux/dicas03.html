@@ -6,7 +6,43 @@
 
 ## Dicas 03
 
-Iniciando...
+
+
+### Problema do microfone no AntiX
+
+Tive um problema no microfone usando o AntiX.
+Já tive o mesmo problema em outras distribuições.
+Quando eu ia gravar algo tanto no *Audacity* quanto no *SimpleScreenRecorder* o som gravado saia apenas em um dos fones de ouvido.
+Com esta configuração isso foi consertado.
+**Lembando que** tive que passei a usar o *PulseAudio* em vez do *Alsa*.
+
+```ssh
+sudo nano /etc/pulse/default.pa
+```
+
+Adicionar no final do arquivo:
+
+```ssh
+.ifexists module-echo-cancel.so
+load-module module-echo-cancel aec_method=webrtc source_name=echocancel sink_name=echocancel1
+set-default-source echocancel
+set-default-sink echocancel1
+.endif
+```
+
+Fonte: [LinuxUprising](https://www.linuxuprising.com/2020/09/how-to-enable-echo-noise-cancellation.html)
+
+Para iniciar o *PulseAudio* o comando é:
+
+```ssh
+pulseaudio --start
+```
+Para reiniciar (ou matar) o *PulseAudio*:
+
+```ssh
+pulseaudio -k
+```
+
 
 
 </xmp>
