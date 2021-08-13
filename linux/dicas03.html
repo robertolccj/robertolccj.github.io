@@ -1,16 +1,28 @@
 <!DOCTYPE html>
 <html>
-<title>Dicas 2</title>
+<title>Dicas 3</title>
 
 <xmp theme="united" style="display:none;">
 
-## Dicas 03
+## Dicas 3
 
 
+### Inicialização lenta no *AntiX*
 
-### Problema do microfone no AntiX
+Depois que fiz a modificação abaixo, o computador passou a inicializar mais rápido. [fonte](https://qastack.com.br/ubuntu/893817/boot-very-slow-because-of-drm-kms-helper errors)
 
-Tive um problema no microfone usando o AntiX.
+ 1. `sudo nano /etc/default/grub`
+
+Adição de `video=SVIDEO-1:d` de forma que ficasse assim:
+`GRUB_CMDLINE_LINUX_DEFAULT="quiet splash video=SVIDEO-1:d"`
+
+ 2. `sudo update-grub`
+ 3. `sudo reboot`
+
+
+### Problema do microfone no *AntiX*
+
+Tive um problema no microfone usando o *AntiX*.
 Já tive o mesmo problema em outras distribuições.
 Quando eu ia gravar algo tanto no *Audacity* quanto no *SimpleScreenRecorder* o som gravado saia apenas em um dos fones de ouvido.
 Com esta configuração isso foi consertado.
@@ -42,6 +54,12 @@ Para reiniciar (ou matar) o *PulseAudio*:
 ```ssh
 pulseaudio -k
 ```
+
+Uma dica para o *AntiX* é inicial por padrão o *PulseAudio*.
+Ir em `control-centre > session > configuration of user`.
+Abrirá um arquivo, onde deverá ser inserido `pulseaudio -D &`.
+Depois, clicar com o botão direito no icone de volume, ir em preferências, e em `Status Icon`, `External mixer` você escreve *pavucontrol* em vez de *alsamixer*. [Fonte da dica.](https://www.antixforum.com/forums/topic/how-to-set-pulseaudio-default/)
+
 
 
 
