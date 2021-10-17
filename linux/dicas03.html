@@ -6,6 +6,12 @@
 
 ## Dicas 3
 
+### Retirando senha de PDF
+
+1. `pdftops -upw SENHA arq_com_senha.pdf arq_sem_senha.ps`
+
+2. `ps2pdf arq_sem_senha.ps arq_sem_senha.pdf`
+
 
 ### Inicialização lenta no *AntiX*
 
@@ -70,6 +76,17 @@ Para corrigir:
 `sudo vim /etc/pulse/daemon.conf`
 
 Alterar a linha `flat-volumes = no`
+
+
+### Instalação
+
+Verificar disco:
+
+`lsblk`
+
+Gravar imagem:
+
+`dd bs=4M if=imagem.iso of=/dev/sde && sync`
 
 
 
