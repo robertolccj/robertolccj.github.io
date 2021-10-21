@@ -6,6 +6,19 @@
 
 ## Dicas 3
 
+
+### Instalação
+
+Verificar disco:
+
+`lsblk`
+
+Gravar imagem:
+
+`dd bs=4M if=imagem.iso of=/dev/sde && sync`
+
+
+
 ### Retirando senha de PDF
 
 1. `pdftops -upw SENHA arq_com_senha.pdf arq_sem_senha.ps`
@@ -78,18 +91,85 @@ Para corrigir:
 Alterar a linha `flat-volumes = no`
 
 
-### Instalação
-
-Verificar disco:
-
-`lsblk`
-
-Gravar imagem:
-
-`dd bs=4M if=imagem.iso of=/dev/sde && sync`
 
 
 
+
+
+
+### GNUPG
+
+Criptografar aquivos.
+
+Instalação: `sudo apt-get install gnupg gnupg2`
+
+
+1) Gera uma chave `gpg --gen-key`
+
+2) Lista as chaves `gpg --list-secret-keys`
+
+3) Exportar a chave secreta
+
+`gpg --armor --export-secret-keys your_email@domain.com > your_name.asc`
+
+
+4) Diretório do gpg `./gnupg`
+
+
+5) Integra com o terminal
+
+ - Editar `vim ~/.bashrc`
+ - Vá para a última linha.
+ - Inserir ``` export GPG_TTY=`tty` ```
+
+6) Integra com o VIM
+
+You can set plugin defaults in ~/.vimrc:
+
+`let g:GPGPreferArmor=1`
+
+`let g:GPGDefaultRecipients=["yourname@yourdomain.com"]`
+
+7) Apagar chave
+
+`gpg --delete-keys 634EE583B18A14A78E3F5D84A17BEF835D67ABC1`
+
+
+
+### Diretório e arquivos
+
+1) Converta o diretório em arquivo: `tar czf myfiles.tar.gz mydirectory/`
+
+2) Voltar à ser diretório: `tar xzf myfiles.tar.gz`
+
+3) Encriptar: `gpg -e -r USERNAME filename.tar.gz`
+
+4) Resulta em filemane.tar.gz.pgp
+
+5) Decriptar: `gpg -d -o filemane.tar.gz filename.tar.gz.gpg`
+
+
+
+### CRIPTOGRAFIA SIMPLES NO VIM (menos seguro)
+
+
+Criptografar: basta utilizar o seguinte comando quando o arquivo estiver aberto.
+
+`:set key=suasenha`
+
+Descriptografar: basta utilizar o mesmo comando com senha vazia
+
+`:set key=`
+
+
+> Fontes (GPG + Vim):
+>
+>https://www.lotharschulz.info/2018/10/21/transparent-editing-of-gpg-encrypted-files-with-vim/
+>
+>https://www.geeksforgeeks.org/encrypting-and-decrypting-the-files-using-gnupg-in-linux/
+>
+>https://statistics.berkeley.edu/computing/encrypt
+>
 
 </xmp>
 
