@@ -1,29 +1,55 @@
 <!DOCTYPE html>
-<html>
+<html lang="pt-br">
 <title>Dicas 3</title>
-
+<meta charset="UTF-8">
 <xmp theme="united" style="display:none;">
 
 
 ### Dicas 3
 
 
+### Radio Web
+
+- `sudo apt install icecast2 ices2 mixxx libmp3lame0`
+
+- No momento da instalação é solicitado três senhas para o [icecast2](https://icecast.org/).
+
+- Servidor pode ser visto em [http://127.0.0.1:8000](http://127.0.0.1:8000).
+
+- O comando `service --status-all` mostra que o icecast2 está rodando.
+
+- O [mixxx](https://mixxx.org/) pode ser configurado para transmitir online via icecast2.
+
+
+Fonte: https://blog.khophi.co/internet-radio-icecast2/
+
+
+### Teste de Radio Web
+
+- `cvlc http://radio.ufscar.br:8000/radioufscar.ogg`
+
+- O *vlc* rodado no terminal.
+
+
+Curiosidade: https://www.radio.ufscar.br/sobre/
+
+
 ### Converter OGG to MP3
 
-`ffmpeg -i file.ogg file.mp3`
+- `ffmpeg -i file.ogg file.mp3`
 
 ### Baixar audio do YT
 
-`youtube-dl -x --audio-format mp3 https://www.youtube.com/watch?v=BFL1E77hTHQ`
+- `youtube-dl -x --audio-format mp3 https://www.youtube.com/watch?v=BFL1E77hTHQ`
 
 Fonte: [Linux Journal](https://www.linuxjournal.com/content/working-youtube-and-extracting-audio)
 
 
 ### Montar pendrive FAT32
 
-Verificar disco com `lsblk`
+- Verificar disco com `lsblk`
 
-Montar com `sudo mount -t vfat /dev/sdb /mnt`
+- Montar com `sudo mount -t vfat /dev/sdb /mnt`
 
 
 ### Instalação
