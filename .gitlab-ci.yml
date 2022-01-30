@@ -3,10 +3,12 @@ image: alpine:latest
 pages:
   stage: deploy
   script:
-  - echo 'Nada a fazer...'
+  - mkdir .public
+  - cp -r * .public
+  - mv .public public
   artifacts:
     paths:
-    - public/
+    - public
   only:
   - master
 
