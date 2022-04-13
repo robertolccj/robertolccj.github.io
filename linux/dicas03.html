@@ -59,10 +59,11 @@ Fonte: [Linux Journal](https://www.linuxjournal.com/content/working-youtube-and-
 
 ### Montar pendrive FAT32
 
-- Verificar disco com `lsblk`
+- Verificar disco com `lsblk --fs`
 
 - Montar com `sudo mount -t vfat /dev/sdb /mnt`
 
+- Alternativa `sudo mount -t auto /dev/sdb /mnt`
 
 ### Instalação
 
