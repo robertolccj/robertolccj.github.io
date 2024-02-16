@@ -46,14 +46,12 @@ Algumas radios usando icecast2:
  - http://streaming.ima.sp.gov.br:8000
 
 
-### Escutar apenas audio do youtube
-
-`$ mpv --video=no link`
-
 
 ### Converter OGG to MP3
 
 - `ffmpeg -i file.ogg file.mp3`
+
+
 
 ### Baixar audio do YT
 
@@ -62,6 +60,33 @@ Algumas radios usando icecast2:
 Fonte: [Linux Journal](https://www.linuxjournal.com/content/working-youtube-and-extracting-audio)
 
  - Usando o MPV: ` mpv --stream-record=video.mp4  https://twitter.com/urldovideo`
+
+
+
+### Escutar apenas audio do youtube
+
+`$ mpv --video=no link`
+
+
+
+**Caso haja problema no comando acima:**
+
+1. Caso o yt-dlp esteja instalado no Debian, desinstalar;
+
+2. Baixar no repositório oficial do Github `https://github.com/yt-dlp/yt-dlp/wiki/Installation`
+
+3. Colocar no diretório `.local/bin/`
+
+4. Criar aquivo `~/.config/mpv/mpv.conf`
+
+5. Inserir linha `script-opts=ytdl_hook-ytdl_path=/home/usuario/.local/bin/yt-dlp`
+
+6. Agora irá funcionar :-)
+
+
+Fonte: [funkyspacemonkey](https://www.funkyspacemonkey.com/replace-youtube-dl-with-yt-dlp-how-to-make-mpv-work-with-yt-dlp)
+
+
 
 ### Montar pendrive FAT32
 
